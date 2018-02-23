@@ -1,0 +1,124 @@
+<!DOCTYPE html> 
+<html>
+ <meta charset="utf-8"> 
+<head> 
+  <title>sar2watermask</title> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.6.4/ol.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.3/css/bootstrap.min.css" type="text/css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.6.4/ol.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ 
+  <style type="text/css"> 
+	.map {
+	    position: absolute;
+	    top: 0;
+	    bottom: 220px;
+	    left: 0;
+	    right: 0;
+	    font-family: Arial, sans-serif;
+	}
+
+	.pane {
+	    position: absolute;
+	    bottom: 0;
+	    right: 0;
+	    left: 0;
+	    height: 220px;
+	    background: ghostwhite;
+	    box-sizing: border-box;
+	    padding: 20px;
+	    font-family: Arial, sans-serif;
+	}
+
+	.panel {
+	    height: 180px;
+	}
+
+	.feature-info {
+	    overflow: scroll;
+	    height: 140px;
+	    padding: 10px;
+	}
+  </style>  
+</head> 
+<body>
+
+<div id="js-map" class="map"></div>
+<div class="pane">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Feature Information</h3>
+        </div>
+        <div id="js-feature-info" class="feature-info"></div>
+    </div>
+</div>
+
+<script>
+
+var osmTiles = new ol.layer.Tile({ 
+	name: 'osm',
+  source: new ol.source.OSM() 
+});
+
+var watermaskSource = new ol.source.TileWMS({ 
+  url: 'http://141.89.96.184:8080/geoserver/wms', 
+  params: {'LAYERS': 'watermask:latestWatermask', 'TILED': true}, 
+  ratio: 1, 
+  serverType: 'geoserver' 
+});
+
+var watermaskTiles = new ol.layer.Tile({
+	name: 'watermask',
+	source: watermaskSource,
+ 	opacity: 0.7 
+});
+
+var view = new ol.View({ 
+  projection: 'EPSG:4326', 
+  center: [-39, -5], 
+  zoom: 7 
+ });
+
+var map = new ol.Map({ 
+	layers: [osmTiles, watermaskTiles], 
+	target: 'js-map', 
+	view: view
+});
+
+var $featureInfo = $('#js-feature-info');
+
+map.on('singleclick', function(event) {
+  var url = watermaskSource.getGetFeatureInfoUrl(
+    event.coordinate,
+    map.getView().getResolution(),
+    map.getView().getProjection(),
+    {INFO_FORMAT: 'text/html'}
+  );
+
+  $.ajax({
+    type: 'GET',
+    url: url
+  }).done(function(data) {
+      $featureInfo.html(data.match(/<body>([\s\S]+)<\/body>/)[1]);
+      $featureInfo.find('table').addClass('table table-bordered table-condensed');
+  });
+});
+
+map.on('pointermove', function(e) {
+	if (e.dragging) {
+	  return;
+	}
+	var pixel = map.getEventPixel(e.originalEvent);
+	var hit = map.forEachLayerAtPixel(pixel, function(layer) {
+	  return layer.get('name') === 'watermask';
+	});
+	map.getTargetElement().style.cursor = hit ? 'pointer' : '';
+});
+
+
+
+</script>
+
+</body> 
+</html>
