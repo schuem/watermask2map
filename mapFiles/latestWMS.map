@@ -1,0 +1,37 @@
+MAP
+	NAME "wmstest"
+	EXTENT -41.413966 -7.838684 -37.279315 -2.803906
+	SIZE 800 600
+	
+	PROJECTION 
+		"init=epsg:4326"
+	END
+	
+	WEB
+		METADATA
+			"wms_title"						"latest watermasks WMS Demo"
+			"wms_enable_request" 			"*"
+			"wms_onlineresource"			"http://141.89.96.184/latestwms&"
+			"wms_srs"						"EPSG:4326"
+			"wms_feature_info_mime_type" 	"text/html"
+			"wms_format" 					"image/png"
+		END
+	END
+	
+  LAYER
+    NAME 		watermask
+    STATUS 		ON
+    TYPE 		POLYGON
+    CONNECTIONTYPE 	POSTGIS
+    CONNECTION 		"host=localhost dbname=watermasks user=sar2water password=eg_BertS101"
+    DATA 			"geom from (select distinct on (id_cogerh) id_cogerh, ingestion_time, geom, id from masks order by id_cogerh, ingestion_time desc) as subquery using unique id using srid=4326"
+    #PROCESSING 		"NATIVE_FILTER=extract(year from ingestion_time) = 2017 AND extract(month from ingestion_time) = 12"
+    
+    CLASS 
+      STYLE
+        COLOR 0 0 0 
+      END
+    END 
+  END
+END
+		
