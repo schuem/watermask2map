@@ -10,7 +10,7 @@ MAP
     STATUS ON
     TYPE POLYGON
     CONNECTIONTYPE POSTGIS
-    CONNECTION "host=localhost dbname=watermasks user=sar2water password=eg_BertS101"
+    CONNECTION "host=localhost dbname=dbname user=user password=password"
     DATA "geom from masks using unique id using srid=4326"
     PROCESSING 'NATIVE_FILTER=extract(year from ingestion_time) = 2017 AND extract(month from ingestion_time) = 12'
     
