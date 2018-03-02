@@ -8,9 +8,13 @@ MAP
 	END
 	
 	WEB
+		HEADER	"../templates/latest_web_header.html"
+		FOOTER	"../templates/latest_web_footer.html"
 		METADATA
 			"wms_title"						"latest watermasks WMS Demo"
 			"wms_enable_request" 			"*"
+			"ows_enable_request"			"*"
+			"ows_include_items"     		"all"
 			"wms_onlineresource"			"http://141.89.96.184/latestwms&"
 			"wms_srs"						"EPSG:4326"
 			"wms_feature_info_mime_type" 	"text/html"
@@ -23,11 +27,22 @@ MAP
     STATUS 		ON
     TYPE 		POLYGON
     CONNECTIONTYPE 	POSTGIS
-    CONNECTION 		"host=localhost dbname=dbname user=user password=password"
-    DATA 			"geom from (select distinct on (id_cogerh) id_cogerh, ingestion_time, geom, id from masks order by id_cogerh, ingestion_time desc) as subquery using unique id using srid=4326"
+    CONNECTION 		"host=localhost dbname=watermasks user=user password=password"
+    DATA 			"geom from (select distinct on (id_cogerh) id_cogerh, ingestion_time, area, geom, id from masks order by id_cogerh, ingestion_time desc) as subquery using unique id using srid=4326"
     #PROCESSING 		"NATIVE_FILTER=extract(year from ingestion_time) = 2017 AND extract(month from ingestion_time) = 12"
     
-    CLASS 
+    HEADER 	 "../templates/latest_layer_header.html"
+    FOOTER 	 "../templates/latest_layer_footer.html"
+    TEMPLATE "../templates/latest_query.html"
+    
+    METADATA
+    	"wms_title"						"latest watermasks"
+    	"wms_feature_info_mime_type" 	"text/html"
+    	"wms_enable_request"			"*"
+
+    END
+    
+    CLASS
       STYLE
         COLOR 0 0 0 
       END
