@@ -29,8 +29,8 @@ var osmTiles = new ol.layer.Tile({
 });
 
 var watermaskSource = new ol.source.TileWMS({ 
-  url: 'http://141.89.96.184/latestwms&', 
-  params: {'LAYERS': 'watermask', 'TILED': true}, 
+  url: 'http://141.89.96.184/mapproxy/service?', 
+  params: {LAYERS: 'cascaded_test', TILED: true}, 
   ratio: 1, 
   serverType: 'mapserver' 
 });
