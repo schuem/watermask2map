@@ -12,7 +12,7 @@ MAP
     CONNECTIONTYPE POSTGIS
     CONNECTION "host=localhost dbname=dbname user=user password=password"
     DATA "geom from masks using unique id using srid=4326"
-    PROCESSING 'NATIVE_FILTER=extract(year from ingestion_time) = 2017 AND extract(month from ingestion_time) = 12'
+    PROCESSING 'NATIVE_FILTER=extract(year from ingestion_time) = 2018 AND extract(month from ingestion_time) = 3'
     
     CLASS 
       

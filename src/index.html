@@ -69,11 +69,21 @@ map.on('singleclick', function(event) {
 
   $.ajax({
     type: 'GET',
-    url: url
-  }).done(function(data) {
-      $featureInfo.html(data.match(/<body>([\s\S]+)<\/body>/)[1]);
+    url: url,
+    success: function(response) {
+      $featureInfo.html(response.match(/<body>([\s\S]+)<\/body>/)[1]);
       $featureInfo.find('table').addClass('table table-bordered table-condensed');
       $cogerid = $featureInfo.find(".id_cogerh").html();
+    }
+  }).done(function() {
+    $.ajax({
+      type: 'GET',
+      url: 'test.php',
+      data: {id: $cogerid},
+      success: function(response) {
+        console.log(response)
+      }
+    });
   });
 });
 

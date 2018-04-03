@@ -1,4 +1,5 @@
 <?php
-// check if php is available on Apache
-phpinfo();
+if (isset($_GET['id'])) {
+  echo "successfull ...";
+}
 ?>
