@@ -17,9 +17,10 @@ function db_connect() {
     }
     if(!$connection) {
       echo "Error : Unable to open database\n";
-    } else {
-      echo "Opened database successfully\n";
     }
+    // else {
+    //   echo "Opened database successfully\n";
+    // }
 
         // If connection was not successful, handle the error
     if($connection === false) {
@@ -33,8 +34,8 @@ function db_connect() {
 $connection = db_connect();
 
 // Check connection
-if ($connection->connect_error) {
-    die("Connection failed: " . $connection->connect_error);
-}
+// if ($connection->connect_error) {
+//     die("Connection failed: " . $connection->connect_error);
+// }
 
 ?>

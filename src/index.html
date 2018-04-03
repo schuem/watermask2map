@@ -12,16 +12,47 @@
 <body>
 
 <div id="js-map" class="map"></div>
-<div class="pane">
+<!-- <div class="pane">
     <div class="panel panel-default">
         <div class="panel-heading">
             <h3 class="panel-title">Feature Information</h3>
         </div>
         <div id="js-feature-info" class="feature-info"></div>
     </div>
+</div> -->
+<div id="popup" class="popup">
+  <a href="#" id="popup-closer" class="popup-closer"></a>
+  <div id="popup-content"></div>
 </div>
 
 <script>
+
+  /**
+ * Elements that make up the popup.
+ */
+var container = document.getElementById('popup');
+var content = document.getElementById('popup-content');
+var closer = document.getElementById('popup-closer');
+/**
+ * Create an overlay to anchor the popup to the map.
+ */
+var overlay = new ol.Overlay({
+  element: container,
+  autoPan: true,
+  autoPanAnimation: {
+    duration: 250
+  }
+});
+/**
+ * Add a click handler to hide the popup.
+ * @return {boolean} Don't follow the href.
+ */
+closer.onclick = function() {
+  overlay.setPosition(undefined);
+  closer.blur();
+  return false;
+};
+
 
 var osmTiles = new ol.layer.Tile({ 
 	name: 'osm',
@@ -51,16 +82,18 @@ var view = new ol.View({
 var map = new ol.Map({ 
 	layers: [osmTiles, watermaskTiles], 
 	target: 'js-map', 
-	view: view
+	view: view,
+  overlays: [overlay]
 });
 
-//funktion für php abfrage an datenbank mit cogerid und popup
+
 
 var $featureInfo = $('#js-feature-info');
 
 map.on('singleclick', function(event) {
+  var coordinate = event.coordinate;
   var url = watermaskSource.getGetFeatureInfoUrl(
-    event.coordinate,
+    coordinate,
     map.getView().getResolution(),
     map.getView().getProjection(),
     {INFO_FORMAT: 'text/html'}
@@ -71,9 +104,10 @@ map.on('singleclick', function(event) {
     type: 'GET',
     url: url,
     success: function(response) {
-      $featureInfo.html(response.match(/<body>([\s\S]+)<\/body>/)[1]);
-      $featureInfo.find('table').addClass('table table-bordered table-condensed');
-      $cogerid = $featureInfo.find(".id_cogerh").html();
+      // $featureInfo.html(response.match(/<body>([\s\S]+)<\/body>/)[1]);
+      // $featureInfo.find('table').addClass('table table-bordered table-condensed');
+      // $cogerid = $featureInfo.find(".id_cogerh").html();
+      $cogerid = $(response).find(".id_cogerh").html();
     }
   }).done(function() {
     $.ajax({
@@ -81,7 +115,8 @@ map.on('singleclick', function(event) {
       url: 'test.php',
       data: {id: $cogerid},
       success: function(response) {
-        console.log(response)
+        content.innerHTML = response;
+        overlay.setPosition(coordinate);
       }
     });
   });
