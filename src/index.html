@@ -22,11 +22,38 @@
 </div> -->
 <div id="popup" class="popup">
   <a href="#" id="popup-closer" class="popup-closer"></a>
-  <div class='child' id="popup-content-map"></div>
-  <div class='child' id="popup-content-table"></div>
+  <div class="child" id="popup-content-map"></div>
+  <div class="child" id="popup-content-table"></div>
 </div>
 
 <script>
+
+  // http://www.codexpedia.com/php/create-html-table-by-jquery-ajax-php/
+  function createPopupTable(data) {
+    var eTable = "<table class='table table-bordered table-condensed'> \
+                  <caption> Data for Cogerh ID "+data[0].id_cogerh+"</caption> \
+                  <thead><tr> \
+                    <th>Ingestion Time</th> \
+                    <th>Area</th> \
+                    <th>Source</th> \
+                  </thead></tr> \
+                  <tbody>";
+    $.each(data, function(index, row){
+      eTable += "<tr>";
+      eTable += "<td>"+row['ingestion_time']+"</td>";
+      eTable += "<td>"+row['area']+"</td>";
+      eTable += "<td>"+row['name']+"</td>";
+      eTable += "</tr>";
+   
+      // eTable += "<tr>";
+      // $.each(row,function(key,value){
+      //   eTable += "<td>"+value+"</td>";
+      // });
+      // eTable += "</tr>";
+    });
+    eTable +="</tbody></table>";
+    popupTable.innerHTML = eTable;
+  }
 
   /**
  * Elements that make up the popup.
@@ -91,7 +118,7 @@ var map = new ol.Map({
 
 
 var $featureInfo = $('#js-feature-info');
-
+var data;
 map.on('singleclick', function(event) {
   var coordinate = event.coordinate;
   var url = watermaskSource.getGetFeatureInfoUrl(
@@ -117,7 +144,11 @@ map.on('singleclick', function(event) {
       url: 'test.php',
       data: {id: $cogerid},
       success: function(response) {
-        popupTable.innerHTML = response;
+        createPopupTable(JSON.parse(response));
+        console.log(response);
+        data = JSON.parse(response);
+        //data = response;
+        // popupTable.innerHTML = response;
         overlay.setPosition(coordinate);
       }
     });
