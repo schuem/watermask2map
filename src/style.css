@@ -29,6 +29,9 @@
     padding: 10px;
 }
 
+/*************************
+Popup-related styling
+**************************/
 .popup {
     position: absolute;
     background-color: white;
@@ -39,7 +42,7 @@
     border: 1px solid #cccccc;
     bottom: 12px;
     left: -50px;
-    min-width: 380px;
+    width: 400px;
 }
 .popup:after, .popup:before {
     top: 100%;
@@ -72,6 +75,16 @@
     content: "✖";
 }
 
+#child {
+    float:left;
+    width: 200px;
+}
+
+/*************************
+Table-related styling
+**************************/
+
 .table {
     font-size: 0.8em;
 }
+

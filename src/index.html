@@ -22,7 +22,8 @@
 </div> -->
 <div id="popup" class="popup">
   <a href="#" id="popup-closer" class="popup-closer"></a>
-  <div id="popup-content"></div>
+  <div class='child' id="popup-content-map"></div>
+  <div class='child' id="popup-content-table"></div>
 </div>
 
 <script>
@@ -31,7 +32,8 @@
  * Elements that make up the popup.
  */
 var container = document.getElementById('popup');
-var content = document.getElementById('popup-content');
+var popupTable = document.getElementById('popup-content-table');
+var popupMap = document.getElementById('popup-content-map')
 var closer = document.getElementById('popup-closer');
 /**
  * Create an overlay to anchor the popup to the map.
@@ -115,7 +117,7 @@ map.on('singleclick', function(event) {
       url: 'test.php',
       data: {id: $cogerid},
       success: function(response) {
-        content.innerHTML = response;
+        popupTable.innerHTML = response;
         overlay.setPosition(coordinate);
       }
     });
