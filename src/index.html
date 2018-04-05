@@ -27,8 +27,6 @@
 </div>
 
 <script>
-
-  // http://www.codexpedia.com/php/create-html-table-by-jquery-ajax-php/
   function createPopupTable(data) {
     var eTable = "<table class='table table-bordered table-condensed'> \
                   <caption> Data for Cogerh ID "+data[0].id_cogerh+"</caption> \
@@ -44,15 +42,21 @@
       eTable += "<td>"+row['area']+"</td>";
       eTable += "<td>"+row['name']+"</td>";
       eTable += "</tr>";
-   
-      // eTable += "<tr>";
-      // $.each(row,function(key,value){
-      //   eTable += "<td>"+value+"</td>";
-      // });
-      // eTable += "</tr>";
     });
     eTable +="</tbody></table>";
     popupTable.innerHTML = eTable;
+  }
+
+  function createPopupMap(data) {
+    // width and height of whole visualization
+    var width = 200px,
+        height = 200px;
+
+    // create svg inside div
+    var svg = d3.select(popupMap)
+                .append("svg")
+                  .attr("width", width)
+                  .attr("height", height);
   }
 
   /**
@@ -145,10 +149,7 @@ map.on('singleclick', function(event) {
       data: {id: $cogerid},
       success: function(response) {
         createPopupTable(JSON.parse(response));
-        console.log(response);
-        data = JSON.parse(response);
-        //data = response;
-        // popupTable.innerHTML = response;
+
         overlay.setPosition(coordinate);
       }
     });
