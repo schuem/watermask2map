@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="style.css" type="text/css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.6.4/ol.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js"></script>
 </head> 
 <body>
 
@@ -47,24 +48,15 @@
     popupTable.innerHTML = eTable;
   }
 
-  function createPopupMap(data) {
-    // width and height of whole visualization
-    var width = 200px,
-        height = 200px;
 
-    // create svg inside div
-    var svg = d3.select(popupMap)
-                .append("svg")
-                  .attr("width", width)
-                  .attr("height", height);
-  }
+
 
   /**
  * Elements that make up the popup.
  */
 var container = document.getElementById('popup');
 var popupTable = document.getElementById('popup-content-table');
-var popupMap = document.getElementById('popup-content-map')
+//var popupMap = document.getElementById('popup-content-map')
 var closer = document.getElementById('popup-closer');
 /**
  * Create an overlay to anchor the popup to the map.
@@ -85,6 +77,20 @@ closer.onclick = function() {
   closer.blur();
   return false;
 };
+
+// width and height of whole visualization
+var width = 200,
+    height = 200;
+// create svg inside div
+var svg = d3.select("#popup-content-map")
+    .append("svg")
+    .attr("width", width)
+    .attr("height", height);
+var projection = d3.geoMercator()
+    .scale(height / Math.PI)
+    .translate([width / 2, height / 2]);
+var path = d3.geoPath()
+    .projection(projection);
 
 
 var osmTiles = new ol.layer.Tile({ 
@@ -119,10 +125,8 @@ var map = new ol.Map({
   overlays: [overlay]
 });
 
-
-
 var $featureInfo = $('#js-feature-info');
-var data;
+//var data;
 map.on('singleclick', function(event) {
   var coordinate = event.coordinate;
   var url = watermaskSource.getGetFeatureInfoUrl(
@@ -148,8 +152,18 @@ map.on('singleclick', function(event) {
       url: 'test.php',
       data: {id: $cogerid},
       success: function(response) {
-        createPopupTable(JSON.parse(response));
-
+        data = JSON.parse(response);
+        createPopupTable(data);
+        d3.json('data.json', function(error, reservoir_data) {
+          alert(error)
+          svg.selectAll('path')
+            .data(data.geom)
+            .enter()
+            .append("path")
+              .attr("fill", "#ccc")
+              .attr("stroke", "#333")
+              .attr("d", "path");
+        });
         overlay.setPosition(coordinate);
       }
     });

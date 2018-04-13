@@ -6,8 +6,14 @@ if (isset($_GET['id'])) {
           . "ORDER BY ingestion_time DESC";
   $res = pg_query($sql);
   $arr_data = pg_fetch_all($res);
-  $json = json_encode($arr_data, JSON_PRETTY_PRINT); 
-  echo $json;
+  $json = json_encode($arr_data, JSON_PRETTY_PRINT);
+  // write json file to disc and echo
+  # try fwrite!!!!!!
+  file_put_contents('data.json', $json);
+  //$fp = fopen('data.json', 'w');
+  //fwrite($fp, $json);
+  //fclose($fp);
+  echo json_encode($arr_data, JSON_PRETTY_PRINT);
 
   //echo "json_encode($arr_data, JSON_PRETTY_PRINT)";
 
