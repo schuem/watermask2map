@@ -20,15 +20,15 @@
         </div>
         <div id="js-feature-info" class="feature-info">
           <div id="feature-info-map" class="feature-info-content" ></div>
-          <div id="feature-info-chart" class="feature-info-content" ></div>
           <div id="feature-info-table" class="feature-info-content" ></div>
+          <div id="feature-info-chart" class="feature-info-content" ></div>
         </div>
     </div>
 </div>
 
 <script>
   function createFeatureTable(data, tableDiv) {
-    var id = data[0].properties.id_cogerh
+    var id = data[0].properties.id_cogerh;
     var eTable = "<table class='table table-bordered table-condensed'> \
                   <thead><tr> \
                     <th>Ingestion Time</th> \
@@ -44,9 +44,9 @@
       eTable += "</tr>";
     });
     eTable +="</tbody></table>";
-    document.getElementById(tableDiv).innerHTML = eTable
+    document.getElementById(tableDiv).innerHTML = eTable;
     document.getElementById('panel-title').innerHTML = "Feature Information for Cogerh ID " + id;
-  };
+  }
 
   function boundsFromData(data) {
     var left = Infinity,
@@ -68,23 +68,22 @@
         });
     });
     return [[left, top], [right, bottom]];
-  };
+  }
 
   function createFeatureMap(data, b, mapDiv) {
     var width = 150,
         height = 150;
 
-    s = .95 / Math.max((b[1][0] - b[0][0]) / width, (b[1][1] - b[0][1]) / height);
+    s = 0.95 / Math.max((b[1][0] - b[0][0]) / width, (b[1][1] - b[0][1]) / height);
     t = [(width - s * (b[1][0] + b[0][0])) / 2, (height - s * (b[1][1] + b[0][1])) / 2];
-
-    console.log(mapDiv);
 
     var svg = d3.select(mapDiv)
       .append("svg")
       .attr("width", width)
       .attr("height", height)
-      .attr("class", "map-container");
-    svg.append("g");
+      .attr("class", "map-container")
+      .append("g")
+      .attr("class", "reservoirs")
     
     var projection = d3.geoMercator()
       .scale(s)
@@ -99,7 +98,93 @@
         .attr("fill", "transparent")
         .attr("stroke", "#333")
         .attr("d", path);
-  };
+  }
+
+  function createFeatureChart(data, chartDiv) {
+    var width = 150,
+        height = 150,
+        padding = 20;
+
+    var svg = d3.select(chartDiv)
+      .append("svg")
+      .attr("width", width)
+      .attr("height", height)
+      .attr("class", "chart-container");
+
+    parseTime = d3.isoParse;
+    formatTime = d3.timeFormat("%Y-%m-%d");
+
+    var timeConverter = function(d) {
+      return parseTime(d.properties.ingestion_time);
+    };
+
+    data.forEach(function(val, i, arr) {
+      arr[i].properties.ingestion_time = timeConverter(val);
+      arr[i].properties.area = arr[i].properties.area / 1000000;
+      console.log(timeConverter(val));
+    });
+
+    xExtent = d3.extent(data, function(d) { return d.properties.ingestion_time;});
+    yExtent = [0, d3.max(data, function(d) { return d.properties.area;})];
+
+    xScale = d3.scaleTime()
+                .domain(xExtent)
+                .range([padding, width - padding]);
+    yScale = d3.scaleLinear()
+                .domain(yExtent)
+                .range([height - padding, padding]);
+
+
+
+
+    // x-axis
+    xAxis = d3.axisBottom()
+              .scale(xScale)
+              .tickFormat(formatTime)
+              .ticks(d3.timeMonth.every(1));
+    svg.append("g")
+        .attr("class", "axis x-axis")
+        .attr("transform", "translate(0," + (height - padding) + ")")
+        .call(xAxis);
+
+    svg.append("text")      
+        .attr("x", width / 2 )
+        .attr("y",  height + padding)
+        .style("text-anchor", "middle")
+        .text("Date");
+
+
+
+    // y-axis
+    yAxis = d3.axisLeft()
+              .scale(yScale)
+              .ticks(10);
+    svg.append("g")
+        .attr("class", "axis y-axis")
+        .attr("transform", "translate(" + padding + ",0)")
+        .call(yAxis);
+
+    svg.append("text")      
+        .attr("y",30 - padding)
+        .attr("x",50 - (height / 2))
+        .attr("transform", "rotate(-90)")
+        .style("text-anchor", "end")
+        .style("font-size", "16px")
+        .text("Area (km²)");
+
+    // generate lines
+    line = d3.line()
+             .x(function(d) { return xScale(d.properties.ingestion_time); })
+             .y(function(d) { return yScale(d.properties.area); });
+    svg.append("path")
+        .datum(data)
+        .attr("class", "line")
+        .attr("fill", "none")
+        .attr("stroke", "black")
+        .attr("stroke-width", 1.5)
+        .attr("d", line);
+  }
+                
 
 var osmTiles = new ol.layer.Tile({ 
 	name: 'osm',
@@ -153,10 +238,12 @@ map.on('singleclick', function(event) {
       data: {id: $cogerid},
       success: function(response) {
         $('#feature-info-map').find(".map-container").remove();
+        $('#feature-info-chart').find(".chart-container").remove();
         data = JSON.parse(response);
         b = boundsFromData(data);
         createFeatureMap(data, b, '#feature-info-map');
         createFeatureTable(data, 'feature-info-table');
+        createFeatureChart(data, '#feature-info-chart');
       }
     });
   });

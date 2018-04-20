@@ -23,7 +23,7 @@
 }
 
 .feature-info {
-    overflow: scroll;
+    /*overflow: scroll;*/
     height: 176px;
     padding: 10px;
 }
@@ -41,6 +41,5 @@ Table-related styling
 .table {
     font-size: 0.8em;
     line-height: 0.6em;
-    vertical-align: middle;
 }
 
