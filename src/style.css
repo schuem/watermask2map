@@ -1,7 +1,6 @@
 .map {
     position: absolute;
     top: 0;
-    /*bottom: 220px;*/
     left: 0;
     right: 0;
     font-family: Arial, sans-serif;
@@ -15,69 +14,24 @@
     height: 220px;
     background: ghostwhite;
     box-sizing: border-box;
-    padding: 20px;
+    padding: 10px;
     font-family: Arial, sans-serif;
 }
 
 .panel {
-    height: 180px;
+    height: 200px;
 }
 
 .feature-info {
     overflow: scroll;
-    height: 140px;
+    height: 176px;
     padding: 10px;
 }
 
-/*************************
-Popup-related styling
-**************************/
-.popup {
-    position: absolute;
-    background-color: white;
-    -webkit-filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
-    filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
-    padding: 15px;
-    border-radius: 10px;
-    border: 1px solid #cccccc;
-    bottom: 12px;
-    left: -50px;
-    width: 400px;
-}
-.popup:after, .popup:before {
-    top: 100%;
-    border: solid transparent;
-    content: " ";
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
-}
-.popup:after {
-    border-top-color: white;
-    border-width: 10px;
-    left: 48px;
-    margin-left: -10px;
-}
-.popup:before {
-    border-top-color: #cccccc;
-    border-width: 11px;
-    left: 48px;
-    margin-left: -11px;
-}
-.popup-closer {
-    text-decoration: none;
-    position: absolute;
-    top: 2px;
-    right: 8px;
-}
-.popup-closer:after {
-    content: "✖";
-}
-
-#child {
-    float:left;
-    width: 200px;
+.feature-info-content {
+    float: left;
+    padding-right: 10px;
+    height: 150px;
 }
 
 /*************************
@@ -86,5 +40,7 @@ Table-related styling
 
 .table {
     font-size: 0.8em;
+    line-height: 0.6em;
+    vertical-align: middle;
 }
 
