@@ -6,40 +6,82 @@
     font-family: Arial, sans-serif;
 }
 
+#help {
+    position: fixed;
+    bottom: 1em;
+    left: 1em;
+    background: ghostwhite;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+
 .pane {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    height: 220px;
+    position: fixed;
+    bottom: 1em;
+    /*right: 1em;*/
+    left: 1em;
+    height: 314px;
+    width: 50%;
     background: ghostwhite;
     box-sizing: border-box;
     padding: 10px;
     font-family: Arial, sans-serif;
 }
 
+#img-load {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .panel {
-    height: 200px;
+    height: 294px;
 }
 
 .feature-info {
     /*overflow: scroll;*/
-    height: 176px;
+    display: flex;
+    justify-content: space-evenly;
+    height: 270px;
     padding: 10px;
 }
 
 .feature-info-content {
     float: left;
-    padding-right: 10px;
-    height: 150px;
+    /*padding-right: 10px;*/
+    height: 250px;
+    background: whitesmoke;
+}
+
+.close {
+    font-size: 0.8em;
 }
 
 /*************************
-Table-related styling
+Table styling
 **************************/
 
+#feature-info-table {
+    display: table;
+}
+
 .table {
+    display: table-cell;
+    vertical-align: middle;
     font-size: 0.8em;
     line-height: 0.6em;
+}
+
+/*************************
+Container styling - CHART only
+**************************/
+
+.chart-container {
+    font-family: Arial, sans-serif;
+    font-size: 0.8em;
 }
 

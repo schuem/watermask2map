@@ -13,7 +13,12 @@
 <body>
 
 <div id="js-map" class="map"></div>
-<div class="pane">
+<div id="help">
+  <h5>Feature Information (zoom and click feature to query)</h5>
+</div>
+<div id="pane" class="pane">
+  <button class="close" onclick="document.getElementById('pane').style.display='none'">Close</button>
+  <img id="img-load" src="loader.gif"/>
     <div class="panel panel-default">
         <div class="panel-heading">
             <h5 id="panel-title" class="panel-title">Feature Information</h5>
@@ -27,19 +32,23 @@
 </div>
 
 <script>
+  $(".pane").hide();
+  $("#img-load").hide();
+
   function createFeatureTable(data, tableDiv) {
     var id = data[0].properties.id_cogerh;
-    var eTable = "<table class='table table-bordered table-condensed'> \
+    var eTable = //"<table class='table table-bordered table-condensed'> \
+                 "<table class='table table-condensed'> \
                   <thead><tr> \
                     <th>Ingestion Time</th> \
-                    <th>Area</th> \
+                    <th>Area (km²) </th> \
                     <th>Source</th> \
                   </thead></tr> \
                   <tbody>";
     $.each(data, function(index, row){
       eTable += "<tr>";
       eTable += "<td>"+row.properties.ingestion_time+"</td>";
-      eTable += "<td>"+row.properties.area+"</td>";
+      eTable += "<td>"+(row.properties.area / 1000000)+"</td>";
       eTable += "<td>"+row.properties.source+"</td>";
       eTable += "</tr>";
     });
@@ -71,8 +80,8 @@
   }
 
   function createFeatureMap(data, b, mapDiv) {
-    var width = 150,
-        height = 150;
+    var width = 250,
+        height = 250;
 
     s = 0.95 / Math.max((b[1][0] - b[0][0]) / width, (b[1][1] - b[0][1]) / height);
     t = [(width - s * (b[1][0] + b[0][0])) / 2, (height - s * (b[1][1] + b[0][1])) / 2];
@@ -101,15 +110,17 @@
   }
 
   function createFeatureChart(data, chartDiv) {
-    var width = 150,
-        height = 150,
-        padding = 20;
+    var margin = {top: 20, right: 20, bottom: 50, left: 50},
+        width = 200,
+        height = 180;
 
     var svg = d3.select(chartDiv)
       .append("svg")
-      .attr("width", width)
-      .attr("height", height)
-      .attr("class", "chart-container");
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+      .attr("class", "chart-container")
+      .append("g")
+        .attr("transform", "translate(" + margin.left +", " + margin.top + ")");
 
     parseTime = d3.isoParse;
     formatTime = d3.timeFormat("%Y-%m-%d");
@@ -121,55 +132,50 @@
     data.forEach(function(val, i, arr) {
       arr[i].properties.ingestion_time = timeConverter(val);
       arr[i].properties.area = arr[i].properties.area / 1000000;
-      console.log(timeConverter(val));
     });
 
     xExtent = d3.extent(data, function(d) { return d.properties.ingestion_time;});
-    yExtent = [0, d3.max(data, function(d) { return d.properties.area;})];
+    yExtent = [0, Math.ceil(d3.max(data, function(d) { return d.properties.area;}))];
 
     xScale = d3.scaleTime()
                 .domain(xExtent)
-                .range([padding, width - padding]);
+                .range([0, width]);
     yScale = d3.scaleLinear()
                 .domain(yExtent)
-                .range([height - padding, padding]);
+                .range([height, 0]);
 
-
-
-
-    // x-axis
+    // add the x axis
     xAxis = d3.axisBottom()
               .scale(xScale)
               .tickFormat(formatTime)
               .ticks(d3.timeMonth.every(1));
     svg.append("g")
         .attr("class", "axis x-axis")
-        .attr("transform", "translate(0," + (height - padding) + ")")
+        .attr("transform", "translate(0," + height + ")")
         .call(xAxis);
 
-    svg.append("text")      
-        .attr("x", width / 2 )
-        .attr("y",  height + padding)
+    // text label for x axis
+    svg.append("text")
+        .attr("transform", "translate(" + (width/2) + "," + (height + margin.top + 20) + ")")      
         .style("text-anchor", "middle")
+        .style("font-weight", "bold")
         .text("Date");
 
-
-
-    // y-axis
+    // add the y axis
     yAxis = d3.axisLeft()
               .scale(yScale)
               .ticks(10);
     svg.append("g")
         .attr("class", "axis y-axis")
-        .attr("transform", "translate(" + padding + ",0)")
         .call(yAxis);
 
     svg.append("text")      
-        .attr("y",30 - padding)
-        .attr("x",50 - (height / 2))
         .attr("transform", "rotate(-90)")
-        .style("text-anchor", "end")
-        .style("font-size", "16px")
+        .attr("y", 0 - margin.left + 5)
+        .attr("x", 0 - (height/2) )
+        .attr("dy", "1em")
+        .style("text-anchor", "middle")
+        .style("font-weight", "bold")
         .text("Area (km²)");
 
     // generate lines
@@ -218,6 +224,10 @@ var map = new ol.Map({
 });
 
 map.on('singleclick', function(event) {
+  $('.pane').show()
+  $("#img-load").show()
+  $(".panel").hide()
+  $("#help").hide()
   var coordinate = event.coordinate;
   var url = watermaskSource.getGetFeatureInfoUrl(
     coordinate,
@@ -241,6 +251,8 @@ map.on('singleclick', function(event) {
         $('#feature-info-chart').find(".chart-container").remove();
         data = JSON.parse(response);
         b = boundsFromData(data);
+        $("#img-load").hide();
+        $(".panel").show()
         createFeatureMap(data, b, '#feature-info-map');
         createFeatureTable(data, 'feature-info-table');
         createFeatureChart(data, '#feature-info-chart');
