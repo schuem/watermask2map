@@ -1,8 +1,9 @@
 .map {
-    position: absolute;
+    height: 100%;
+    position: fixed;
     top: 0;
     left: 0;
-    right: 0;
+    right: 0;*/
     font-family: Arial, sans-serif;
 }
 
@@ -22,7 +23,8 @@
     bottom: 1em;
     /*right: 1em;*/
     left: 1em;
-    height: 314px;
+    min-height: 314px;
+    height: 30%;
     width: 50%;
     background: ghostwhite;
     box-sizing: border-box;
@@ -39,22 +41,26 @@
 }
 
 .panel {
-    height: 294px;
+    min-height: 294px;
+    height: 93%;
 }
 
 .feature-info {
     /*overflow: scroll;*/
     display: flex;
     justify-content: space-evenly;
-    height: 270px;
-    padding: 10px;
+    min-height: 270px;
+    height: 92%;
+    /*padding: 10px;*/
 }
 
 .feature-info-content {
     float: left;
     /*padding-right: 10px;*/
-    height: 250px;
+    min-height: 250px;
+    height: 92%;
     background: whitesmoke;
+    /*width: 31%;*/
 }
 
 .close {

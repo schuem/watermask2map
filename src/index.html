@@ -48,7 +48,7 @@
     $.each(data, function(index, row){
       eTable += "<tr>";
       eTable += "<td>"+row.properties.ingestion_time+"</td>";
-      eTable += "<td>"+(row.properties.area / 1000000)+"</td>";
+      eTable += "<td>"+parseFloat((Math.round(row.properties.area * 100)/100)  / 1000000).toFixed(2);+"</td>";
       eTable += "<td>"+row.properties.source+"</td>";
       eTable += "</tr>";
     });
@@ -135,6 +135,8 @@
     });
 
     xExtent = d3.extent(data, function(d) { return d.properties.ingestion_time;});
+    xExtent[0] = d3.timeMonth.offset(xExtent[0], -1);
+    xExtent[1] = d3.timeMonth.offset(xExtent[1], 1);
     yExtent = [0, Math.ceil(d3.max(data, function(d) { return d.properties.area;}))];
 
     xScale = d3.scaleTime()
@@ -189,6 +191,15 @@
         .attr("stroke", "black")
         .attr("stroke-width", 1.5)
         .attr("d", line);
+
+    // add points
+    svg.selectAll("dot")
+        .data(data)
+        .enter()
+        .append("circle")
+        .attr("cx", function(d) {return xScale(d.properties.ingestion_time);})
+        .attr("cy", function(d) {return yScale(d.properties.area);})
+        .attr("r", 3.5);
   }
                 
 
