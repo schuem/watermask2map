@@ -123,7 +123,7 @@
         .attr("transform", "translate(" + margin.left +", " + margin.top + ")");
 
     parseTime = d3.isoParse;
-    formatTime = d3.timeFormat("%Y-%m-%d");
+    formatTime = d3.timeFormat("%m");
 
     var timeConverter = function(d) {
       return parseTime(d.properties.ingestion_time);
@@ -132,7 +132,16 @@
     data.forEach(function(val, i, arr) {
       arr[i].properties.ingestion_time = timeConverter(val);
       arr[i].properties.area = arr[i].properties.area / 1000000;
+      if (formatTime(arr[i].properties.ingestion_time) == 12) {
+        console.log(val.id);
+        console.log(val.id, formatTime(arr[i].properties.ingestion_time));
+        arr[i].properties.isYear = 1;
+      } else {
+        arr[i].properties.isYear = 0;
+      }
     });
+
+    console.log(data);
 
     xExtent = d3.extent(data, function(d) { return d.properties.ingestion_time;});
     xExtent[0] = d3.timeMonth.offset(xExtent[0], -1);
@@ -149,8 +158,18 @@
     // add the x axis
     xAxis = d3.axisBottom()
               .scale(xScale)
-              .tickFormat(formatTime)
+              .tickSizeOuter(0)
               .ticks(d3.timeMonth.every(1));
+
+    // change tick format according to 
+    xAxis.tickFormat(function(d) {
+      if (d3.timeYear(d) < d) {
+        return d3.timeFormat("%m")(d);
+      } else {
+        return d3.timeFormat("%Y")(d);
+      }
+    });
+
     svg.append("g")
         .attr("class", "axis x-axis")
         .attr("transform", "translate(0," + height + ")")
@@ -166,6 +185,7 @@
     // add the y axis
     yAxis = d3.axisLeft()
               .scale(yScale)
+              .tickSizeOuter(0)
               .ticks(10);
     svg.append("g")
         .attr("class", "axis y-axis")
