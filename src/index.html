@@ -235,10 +235,23 @@ var watermaskSource = new ol.source.TileWMS({
   serverType: 'mapserver' 
 });
 
+var funcemeSource = new ol.source.TileWMS({ 
+  url: 'http://141.89.96.184/latestwms?', 
+  params: {LAYERS: 'funceme', TILED: true}, 
+  ratio: 1, 
+  serverType: 'mapserver' 
+});
+
 var watermaskTiles = new ol.layer.Tile({
 	name: 'watermask',
 	source: watermaskSource,
  	opacity: 0.7 
+});
+
+var funcemeTiles = new ol.layer.Tile({
+  name: 'funceme',
+  source: funcemeSource,
+  opacity: 0.7 
 });
 
 var view = new ol.View({ 
@@ -249,7 +262,7 @@ var view = new ol.View({
  });
 
 var map = new ol.Map({ 
-	layers: [osmTiles, watermaskTiles], 
+	layers: [osmTiles, watermaskTiles, funcemeTiles], 
 	target: 'js-map', 
 	view: view
 });
