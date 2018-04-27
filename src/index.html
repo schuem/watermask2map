@@ -132,16 +132,16 @@
     data.forEach(function(val, i, arr) {
       arr[i].properties.ingestion_time = timeConverter(val);
       arr[i].properties.area = arr[i].properties.area / 1000000;
-      if (formatTime(arr[i].properties.ingestion_time) == 12) {
-        console.log(val.id);
-        console.log(val.id, formatTime(arr[i].properties.ingestion_time));
-        arr[i].properties.isYear = 1;
-      } else {
-        arr[i].properties.isYear = 0;
-      }
+      // if (formatTime(arr[i].properties.ingestion_time) == 12) {
+      //   //console.log(val.id);
+      //   //console.log(val.id, formatTime(arr[i].properties.ingestion_time));
+      //   arr[i].properties.isYear = 1;
+      // } else {
+      //   arr[i].properties.isYear = 0;
+      // }
     });
 
-    console.log(data);
+    //console.log(data);
 
     xExtent = d3.extent(data, function(d) { return d.properties.ingestion_time;});
     xExtent[0] = d3.timeMonth.offset(xExtent[0], -1);
@@ -158,10 +158,11 @@
     // add the x axis
     xAxis = d3.axisBottom()
               .scale(xScale)
+              .tickSize(10)
               .tickSizeOuter(0)
               .ticks(d3.timeMonth.every(1));
 
-    // change tick format according to 
+    // change tick format according to time
     xAxis.tickFormat(function(d) {
       if (d3.timeYear(d) < d) {
         return d3.timeFormat("%m")(d);
@@ -174,6 +175,23 @@
         .attr("class", "axis x-axis")
         .attr("transform", "translate(0," + height + ")")
         .call(xAxis);
+
+    // change tick style according to time
+    // if not a year tick, ticks are smaller
+    d3.selectAll("g.axis.x-axis g.tick line")
+        .filter(function (d) {
+          if (d3.timeYear(d) < d) {
+            return true;
+          } 
+        })
+        .attr("y2", "6");
+    d3.selectAll("g.axis.x-axis g.tick text")
+        .filter(function (d) {
+          if (d3.timeYear(d) < d) {
+            return true;
+          } 
+        })
+        .attr("y", "9");
 
     // text label for x axis
     svg.append("text")
@@ -267,42 +285,46 @@ var map = new ol.Map({
 	view: view
 });
 
+
+   
 map.on('singleclick', function(event) {
-  $('.pane').show()
-  $("#img-load").show()
-  $(".panel").hide()
-  $("#help").hide()
-  var coordinate = event.coordinate;
-  var url = watermaskSource.getGetFeatureInfoUrl(
-    coordinate,
-    map.getView().getResolution(),
-    map.getView().getProjection(),
-    {INFO_FORMAT: 'text/html'}
-  );
-  $.ajax({
-    type: 'GET',
-    url: url,
-    success: function(response) {
-      $cogerid = $(response).find(".id_cogerh").html();
-    }
-  }).done(function() {
+  if (map.getTargetElement().style.cursor == 'pointer') {
+    $('.pane').show()
+    $("#img-load").show()
+    $(".panel").hide()
+    $("#help").hide()
+    var coordinate = event.coordinate;
+    var url = watermaskSource.getGetFeatureInfoUrl(
+      coordinate,
+      map.getView().getResolution(),
+      map.getView().getProjection(),
+      {INFO_FORMAT: 'text/html'}
+    );
     $.ajax({
       type: 'GET',
-      url: 'test.php',
-      data: {id: $cogerid},
+      url: url,
       success: function(response) {
-        $('#feature-info-map').find(".map-container").remove();
-        $('#feature-info-chart').find(".chart-container").remove();
-        data = JSON.parse(response);
-        b = boundsFromData(data);
-        $("#img-load").hide();
-        $(".panel").show()
-        createFeatureMap(data, b, '#feature-info-map');
-        createFeatureTable(data, 'feature-info-table');
-        createFeatureChart(data, '#feature-info-chart');
+        cogerid = $(response).find(".id_cogerh").html();
       }
+    }).done(function() {
+      $.ajax({
+        type: 'GET',
+        url: 'test.php',
+        data: {id: cogerid},
+        success: function(response) {
+          $('#feature-info-map').find(".map-container").remove();
+          $('#feature-info-chart').find(".chart-container").remove();
+          data = JSON.parse(response);
+          b = boundsFromData(data);
+          $("#img-load").hide();
+          $(".panel").show()
+          createFeatureMap(data, b, '#feature-info-map');
+          createFeatureTable(data, 'feature-info-table');
+          createFeatureChart(data, '#feature-info-chart');
+        }
+      });
     });
-  });
+  }
 });
 
 map.on('pointermove', function(e) {
