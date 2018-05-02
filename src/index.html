@@ -30,10 +30,19 @@
         </div>
     </div>
 </div>
+<div id=legend></div>
 
 <script>
   $(".pane").hide();
   $("#img-load").hide();
+
+  $.ajax({
+    type: 'GET',
+    url: "http://141.89.96.184/latestwms?mode=legend",
+    success: function(response) {
+      $("#legend").html(response);
+    }
+  });
 
   function createFeatureTable(data, tableDiv) {
     var id = data[0].properties.id_cogerh;
@@ -92,7 +101,7 @@
       .attr("height", height)
       .attr("class", "map-container")
       .append("g")
-      .attr("class", "reservoirs")
+      .attr("class", "reservoirs");
     
     var projection = d3.geoMercator()
       .scale(s)
@@ -132,21 +141,19 @@
     data.forEach(function(val, i, arr) {
       arr[i].properties.ingestion_time = timeConverter(val);
       arr[i].properties.area = arr[i].properties.area / 1000000;
-      // if (formatTime(arr[i].properties.ingestion_time) == 12) {
-      //   //console.log(val.id);
-      //   //console.log(val.id, formatTime(arr[i].properties.ingestion_time));
-      //   arr[i].properties.isYear = 1;
-      // } else {
-      //   arr[i].properties.isYear = 0;
-      // }
     });
-
-    //console.log(data);
 
     xExtent = d3.extent(data, function(d) { return d.properties.ingestion_time;});
     xExtent[0] = d3.timeMonth.offset(xExtent[0], -1);
     xExtent[1] = d3.timeMonth.offset(xExtent[1], 1);
-    yExtent = [0, Math.ceil(d3.max(data, function(d) { return d.properties.area;}))];
+
+    // do not ceil area of very small reservoirs
+    yMax = d3.max(data, function(d) { return d.properties.area;});
+    if (yMax < 1) {
+      yExtent = [0, yMax];
+    } else {
+      yExtent = [0, Math.ceil(yMax)]
+    }
 
     xScale = d3.scaleTime()
                 .domain(xExtent)
