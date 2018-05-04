@@ -14,20 +14,21 @@
 
 <div id="js-map" class="map"></div>
 <div id="help">
-  <h5>Feature Information (zoom and click feature to query)</h5>
+  <p id="p_help">Feature Information (zoom and click feature to query)</p>
 </div>
 <div id="pane" class="pane">
-  <button class="close" onclick="document.getElementById('pane').style.display='none'">Close</button>
+  <button class="close" onclick="document.getElementById('pane').style.display='none'">x</button>
   <img id="img-load" src="loader.gif"/>
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h5 id="panel-title" class="panel-title">Feature Information</h5>
+            <p id="panel-title" class="panel-title">Feature Information</p>
         </div>
         <div id="js-feature-info" class="feature-info">
           <div id="feature-info-map" class="feature-info-content" ></div>
           <div id="feature-info-table" class="feature-info-content" ></div>
           <div id="feature-info-chart" class="feature-info-content" ></div>
         </div>
+
     </div>
 </div>
 <div id=legend></div>
@@ -35,6 +36,9 @@
 <script>
   $(".pane").hide();
   $("#img-load").hide();
+
+  mapEle = document.getElementById('js-map');
+  mapWidth = mapEle.clientWidth;
 
   $.ajax({
     type: 'GET',
@@ -63,7 +67,7 @@
     });
     eTable +="</tbody></table>";
     document.getElementById(tableDiv).innerHTML = eTable;
-    document.getElementById('panel-title').innerHTML = "Feature Information for Cogerh ID " + id;
+    
   }
 
   function boundsFromData(data) {
@@ -270,7 +274,7 @@ var funcemeSource = new ol.source.TileWMS({
 var watermaskTiles = new ol.layer.Tile({
 	name: 'watermask',
 	source: watermaskSource,
- 	opacity: 0.7 
+ 	opacity: 1 
 });
 
 var funcemeTiles = new ol.layer.Tile({
@@ -291,15 +295,9 @@ var map = new ol.Map({
 	target: 'js-map', 
 	view: view
 });
-
-
    
 map.on('singleclick', function(event) {
   if (map.getTargetElement().style.cursor == 'pointer') {
-    $('.pane').show()
-    $("#img-load").show()
-    $(".panel").hide()
-    $("#help").hide()
     var coordinate = event.coordinate;
     var url = watermaskSource.getGetFeatureInfoUrl(
       coordinate,
@@ -307,12 +305,18 @@ map.on('singleclick', function(event) {
       map.getView().getProjection(),
       {INFO_FORMAT: 'text/html'}
     );
+
+    $('.pane').show();
+    $("#img-load").show();
+    $(".panel").hide();
+    $("#help").hide();
+    
     $.ajax({
-      type: 'GET',
-      url: url,
-      success: function(response) {
-        cogerid = $(response).find(".id_cogerh").html();
-      }
+    type: 'GET',
+    url: url,
+    success: function(response) {
+      cogerid = $(response).find(".id_cogerh").html();
+    }
     }).done(function() {
       $.ajax({
         type: 'GET',
@@ -322,12 +326,20 @@ map.on('singleclick', function(event) {
           $('#feature-info-map').find(".map-container").remove();
           $('#feature-info-chart').find(".chart-container").remove();
           data = JSON.parse(response);
+          cogerid = data[0].properties.id_cogerh;
+          document.getElementById('panel-title').innerHTML = "Feature Information for Cogerh ID " + cogerid;
           b = boundsFromData(data);
           $("#img-load").hide();
-          $(".panel").show()
-          createFeatureMap(data, b, '#feature-info-map');
-          createFeatureTable(data, 'feature-info-table');
-          createFeatureChart(data, '#feature-info-chart');
+          $("#feature-info-small").hide();
+          $(".panel").show();
+          if (mapWidth < 920) {
+            createFeatureTable(data, 'feature-info-table');
+          }
+          else {
+            createFeatureMap(data, b, '#feature-info-map');
+            createFeatureTable(data, 'feature-info-table');
+            createFeatureChart(data, '#feature-info-chart');
+          }
         }
       });
     });

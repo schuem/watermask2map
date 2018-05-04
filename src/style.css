@@ -7,18 +7,6 @@
     font-family: Arial, sans-serif;
     overflow: hidden;
 }
-
-#help {
-    position: fixed;
-    bottom: 1em;
-    left: 1em;
-    background: ghostwhite;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-
-
 .pane {
     position: fixed;
     bottom: 1em;
@@ -26,11 +14,38 @@
     left: 1em;
     min-height: 314px;
     height: 30%;
+    min-width: 920px;
     width: 50%;
     background: ghostwhite;
     box-sizing: border-box;
     padding: 10px;
     font-family: Arial, sans-serif;
+}
+.panel {
+    min-height: 294px;
+    height: 93%;
+}
+.feature-info {
+    /*overflow: scroll;*/
+    display: flex;
+    justify-content: space-evenly;
+    min-height: 270px;
+    height: 92%;
+    /*padding: 10px;*/
+}
+#help {
+    position: fixed;
+    bottom: 3em;
+    left: 1em;
+    background: ghostwhite;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+#p_help {
+    font-size: 0.8em;
+    line-height: inherit;
+    margin: auto;
 }
 
 #img-load {
@@ -41,33 +56,48 @@
     transform: translate(-50%, -50%);
 }
 
-.panel {
-    min-height: 294px;
-    height: 93%;
-}
-
-.feature-info {
-    /*overflow: scroll;*/
-    display: flex;
-    justify-content: space-evenly;
-    min-height: 270px;
-    height: 92%;
-    /*padding: 10px;*/
-}
-
 .feature-info-content {
     float: left;
-    /*padding-right: 10px;*/
     min-height: 250px;
     height: 92%;
     background: whitesmoke;
-    /*width: 31%;*/
 }
-
+@media only screen and (max-width: 920px) {
+    .pane {
+        height: 15%;
+        bottom: 3em;
+        min-height: initial;
+        min-width: initial;
+        width: 90%;
+    }
+    .panel-title {
+        font-size: 2vw;
+    }
+    .panel {
+        height: 100%;
+        min-height: initial;
+    }
+    .feature-info {
+        overflow: scroll;
+        height: 100%;
+        min-height: initial;
+        padding: 10px;
+    }
+    .feature-info-content {
+        height: 100%;
+        min-height: initial;
+        background: ghostwhite;
+    }
+    #help {
+        width: 70%;
+    }
+    p {
+        margin-bottom: 1vw;
+    }
+}
 .close {
     font-size: 0.8em;
 }
-
 #legend {
     position: fixed;
     right: 1em;
@@ -79,22 +109,31 @@
 /*************************
 Table styling
 **************************/
-
 #feature-info-table {
     display: table;
 }
-
 .table {
     display: table-cell;
     vertical-align: middle;
     font-size: 0.8em;
     line-height: 0.6em;
 }
+@media only screen and (max-width: 920px) {
+    .table {
+        display: table-cell;
+        text-align: center;
+        vertical-align: top;
+        font-size: 2vw;
+        line-height: 2.1vw;
+    }
+    .table td, .table th {
+        padding: 1vw;
+    }
+}
 
 /*************************
 Container styling - CHART only
 **************************/
-
 .chart-container {
     font-family: Arial, sans-serif;
     font-size: 0.8em;
