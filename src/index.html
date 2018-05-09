@@ -119,7 +119,9 @@
       .append("path")
         .attr("fill", "transparent")
         .attr("stroke", "#333")
-        .attr("d", path);
+        .attr("d", path)
+        .on("mouseover", handleMouseOver)
+        .on("mouseout", handleMouseOut);
   }
 
   function createFeatureChart(data, chartDiv) {
@@ -361,6 +363,13 @@ map.getView().on('change:resolution', function(e) {
   console.log(view.getZoom());
 });
 
+function handleMouseOver(d, i) { 
+      d3.select(this.parentNode).attr({fill: "orange"});
+}
+
+function handleMouseOut(d, i) {
+      d3.select(this.parentNode).select("path").style("fill", "transparent");
+}
 
 
 </script>
