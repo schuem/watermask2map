@@ -54,14 +54,14 @@
                  "<table class='table table-condensed'> \
                   <thead><tr> \
                     <th>Ingestion Time</th> \
-                    <th>Area (km²) </th> \
+                    <th>Area (ha) </th> \
                     <th>Source</th> \
                   </thead></tr> \
                   <tbody>";
     $.each(data, function(index, row){
       eTable += "<tr>";
       eTable += "<td>"+row.properties.ingestion_time+"</td>";
-      eTable += "<td>"+parseFloat((Math.round(row.properties.area * 100)/100)  / 1000000).toFixed(2);+"</td>";
+      eTable += "<td>"+parseFloat((Math.round(row.properties.area * 100)/100)  / 10000).toFixed(2);+"</td>";
       eTable += "<td>"+row.properties.source+"</td>";
       eTable += "</tr>";
     });
@@ -146,7 +146,7 @@
 
     data.forEach(function(val, i, arr) {
       arr[i].properties.ingestion_time = timeConverter(val);
-      arr[i].properties.area = arr[i].properties.area / 1000000;
+      arr[i].properties.area = arr[i].properties.area / 10000;
     });
 
     xExtent = d3.extent(data, function(d) { return d.properties.ingestion_time;});
@@ -155,10 +155,10 @@
 
     // do not ceil area of very small reservoirs
     yMax = d3.max(data, function(d) { return d.properties.area;});
-    if (yMax < 1) {
+    if (yMax < 100) {
       yExtent = [0, yMax];
     } else {
-      yExtent = [0, Math.ceil(yMax)]
+      yExtent = [0, Math.ceil(yMax)];
     }
 
     xScale = d3.scaleTime()
@@ -224,12 +224,12 @@
 
     svg.append("text")      
         .attr("transform", "rotate(-90)")
-        .attr("y", 0 - margin.left + 5)
+        .attr("y", 0 - margin.left - 3)
         .attr("x", 0 - (height/2) )
         .attr("dy", "1em")
         .style("text-anchor", "middle")
         .style("font-weight", "bold")
-        .text("Area (km²)");
+        .text("Area (ha)");
 
     // generate lines
     line = d3.line()
@@ -363,12 +363,12 @@ map.getView().on('change:resolution', function(e) {
   console.log(view.getZoom());
 });
 
-function handleMouseOver(d, i) { 
-      d3.select(this.parentNode).attr({fill: "orange"});
+function handleMouseOver(d) { 
+      d3.select(this).attr("fill", "orange");
 }
 
-function handleMouseOut(d, i) {
-      d3.select(this.parentNode).select("path").style("fill", "transparent");
+function handleMouseOut(d) {
+      d3.select(this).attr("fill", "transparent");
 }
 
 
