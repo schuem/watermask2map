@@ -124,6 +124,14 @@
         .on("mouseout", handleMouseOut);
   }
 
+  function handleMouseOver(d) { 
+      d3.select(this).attr("fill", "orange");
+  }
+
+  function handleMouseOut(d) {
+      d3.select(this).attr("fill", "transparent");
+  }
+
   function createFeatureChart(data, chartDiv) {
     var margin = {top: 20, right: 20, bottom: 50, left: 50},
         width = 200,
@@ -146,16 +154,18 @@
 
     data.forEach(function(val, i, arr) {
       arr[i].properties.ingestion_time = timeConverter(val);
-      arr[i].properties.area = arr[i].properties.area / 10000;
+      area = arr[i].properties.area;
+      // estimated volume using Molle's expression
+      arr[i].properties.estVolume = 0.001 * Math.pow((area / 2700), 1.5882);
     });
 
-    xExtent = d3.extent(data, function(d) { return d.properties.ingestion_time;});
+    xExtent = d3.extent(data, function(d) { return d.properties.ingestion_time; });
     xExtent[0] = d3.timeMonth.offset(xExtent[0], -1);
     xExtent[1] = d3.timeMonth.offset(xExtent[1], 1);
 
     // do not ceil area of very small reservoirs
-    yMax = d3.max(data, function(d) { return d.properties.area;});
-    if (yMax < 100) {
+    yMax = d3.max(data, function(d) { return d.properties.estVolume; });
+    if (yMax < 1) {
       yExtent = [0, yMax];
     } else {
       yExtent = [0, Math.ceil(yMax)];
@@ -229,12 +239,12 @@
         .attr("dy", "1em")
         .style("text-anchor", "middle")
         .style("font-weight", "bold")
-        .text("Area (ha)");
+        .text("est. Volume (hm³)");
 
     // generate lines
     line = d3.line()
              .x(function(d) { return xScale(d.properties.ingestion_time); })
-             .y(function(d) { return yScale(d.properties.area); });
+             .y(function(d) { return yScale(d.properties.estVolume); });
     svg.append("path")
         .datum(data)
         .attr("class", "line")
@@ -249,7 +259,7 @@
         .enter()
         .append("circle")
         .attr("cx", function(d) {return xScale(d.properties.ingestion_time);})
-        .attr("cy", function(d) {return yScale(d.properties.area);})
+        .attr("cy", function(d) {return yScale(d.properties.estVolume);})
         .attr("r", 3.5);
   }
                 
@@ -363,13 +373,7 @@ map.getView().on('change:resolution', function(e) {
   console.log(view.getZoom());
 });
 
-function handleMouseOver(d) { 
-      d3.select(this).attr("fill", "orange");
-}
 
-function handleMouseOut(d) {
-      d3.select(this).attr("fill", "transparent");
-}
 
 
 </script>
