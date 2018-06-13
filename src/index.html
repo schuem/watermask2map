@@ -266,14 +266,17 @@
 
 var osmTiles = new ol.layer.Tile({ 
 	name: 'osm',
-  source: new ol.source.OSM() 
+  source: new ol.source.OSM({
+    projection: 'EPSG:4326' 
+  })
 });
 
 var watermaskSource = new ol.source.TileWMS({ 
   url: 'http://141.89.96.184/latestwms?', 
   params: {LAYERS: 'watermask', TILED: true}, 
   ratio: 1, 
-  serverType: 'mapserver' 
+  serverType: 'mapserver',
+  projection: 'EPSG:4326'
 });
 
 var funcemeSource = new ol.source.TileWMS({ 
