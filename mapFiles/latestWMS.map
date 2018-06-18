@@ -48,5 +48,12 @@ MAP
       END
     END 
   END
+
+  LAYER
+  	NAME dem
+  	STATUS ON
+  	TYPE RASTER
+  	DATA "/home/schuettig/DEMs/dems_4326.tif"
+  END
 END
 		
