@@ -306,7 +306,7 @@ var funcemeTiles = new ol.layer.Tile({
 });
 
 var demTiles = new ol.layer.Tile({
-  ńame: 'dem',
+  name: 'dem',
   source: demSource,
   opacity: 1
 });
@@ -319,7 +319,7 @@ var view = new ol.View({
  });
 
 var map = new ol.Map({ 
-	layers: [osmTiles, demTiles, watermaskTiles, funcemeTiles], 
+	layers: [osmTiles, watermaskTiles, funcemeTiles], 
 	target: 'js-map', 
 	view: view
 });
