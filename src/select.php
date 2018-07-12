@@ -7,13 +7,13 @@ if (isset($_GET['id'])) {
             'geometry',   ST_AsGeoJSON(geom)::json,
             'properties', json_build_object(
                 'feat_type',      ST_GeometryType(geom),
-                'id_cogerh',      id_cogerh,
+                'id_funceme',      id_funceme,
                 'ingestion_time', ingestion_time,
                 'area',           area,
                 'source',         s.name
              )
           ) AS features FROM masks m "
-          . "INNER JOIN source s on m.source_id = s.source_id WHERE id_cogerh = '".$_GET['id']."' "
+          . "INNER JOIN source s on m.source_id = s.source_id WHERE id_funceme = '".$_GET['id']."' "
           . "ORDER BY ingestion_time DESC";
   $res = pg_query($connection, $sql);
 
@@ -27,14 +27,14 @@ if (isset($_GET['id'])) {
   //pg_close($connection);
 
   $processed = array();
-  
+
   foreach (($arr_data) as $key => $value) {
     $processed[$key] = json_decode($value['features'], TRUE);
   }
 
   $json = json_encode($processed);
-  
+
   echo $json;
-  
+
 }
 ?>

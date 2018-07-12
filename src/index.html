@@ -1,15 +1,15 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
- <meta charset="utf-8"> 
-<head> 
-  <title>sar2watermask</title> 
+ <meta charset="utf-8">
+<head>
+  <title>sar2watermask</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.6.4/ol.css" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.3/css/bootstrap.min.css" type="text/css">
   <link rel="stylesheet" href="style.css" type="text/css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.6.4/ol.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js"></script>
-</head> 
+</head>
 <body>
 
 <div id="js-map" class="map"></div>
@@ -49,7 +49,7 @@
   });
 
   function createFeatureTable(data, tableDiv) {
-    var id = data[0].properties.id_cogerh;
+    var id = data[0].properties.id_funceme;
     var eTable = //"<table class='table table-bordered table-condensed'> \
                  "<table class='table table-condensed'> \
                   <thead><tr> \
@@ -67,7 +67,7 @@
     });
     eTable +="</tbody></table>";
     document.getElementById(tableDiv).innerHTML = eTable;
-    
+
   }
 
   function boundsFromData(data) {
@@ -106,13 +106,13 @@
       .attr("class", "map-container")
       .append("g")
       .attr("class", "reservoirs");
-    
+
     var projection = d3.geoMercator()
       .scale(s)
       .translate(t);
-    
+
     var path = d3.geoPath().projection(projection);
-    
+
     svg.selectAll('path')
       .data(data)
       .enter()
@@ -124,7 +124,7 @@
         .on("mouseout", handleMouseOut);
   }
 
-  function handleMouseOver(d) { 
+  function handleMouseOver(d) {
       d3.select(this).attr("fill", "orange");
   }
 
@@ -205,20 +205,20 @@
         .filter(function (d) {
           if (d3.timeYear(d) < d) {
             return true;
-          } 
+          }
         })
         .attr("y2", "6");
     d3.selectAll("g.axis.x-axis g.tick text")
         .filter(function (d) {
           if (d3.timeYear(d) < d) {
             return true;
-          } 
+          }
         })
         .attr("y", "9");
 
     // text label for x axis
     svg.append("text")
-        .attr("transform", "translate(" + (width/2) + "," + (height + margin.top + 20) + ")")      
+        .attr("transform", "translate(" + (width/2) + "," + (height + margin.top + 20) + ")")
         .style("text-anchor", "middle")
         .style("font-weight", "bold")
         .text("Date");
@@ -232,7 +232,7 @@
         .attr("class", "axis y-axis")
         .call(yAxis);
 
-    svg.append("text")      
+    svg.append("text")
         .attr("transform", "rotate(-90)")
         .attr("y", 0 - margin.left - 3)
         .attr("x", 0 - (height/2) )
@@ -262,35 +262,35 @@
         .attr("cy", function(d) {return yScale(d.properties.estVolume);})
         .attr("r", 3.5);
   }
-                
 
-var osmTiles = new ol.layer.Tile({ 
+
+var osmTiles = new ol.layer.Tile({
 	name: 'osm',
   source: new ol.source.OSM({
-    projection: 'EPSG:4326' 
+    projection: 'EPSG:4326'
   })
 });
 
-var watermaskSource = new ol.source.TileWMS({ 
-  url: 'http://141.89.96.184/latestwms?', 
-  params: {LAYERS: 'watermask', TILED: true}, 
-  ratio: 1, 
+var watermaskSource = new ol.source.TileWMS({
+  url: 'http://141.89.96.184/latestwms?',
+  params: {LAYERS: 'watermask', TILED: true},
+  ratio: 1,
   serverType: 'mapserver',
   projection: 'EPSG:4326'
 });
 
-var funcemeSource = new ol.source.TileWMS({ 
-  url: 'http://141.89.96.184/latestwms?', 
-  params: {LAYERS: 'funceme', TILED: true}, 
-  ratio: 1, 
-  serverType: 'mapserver' 
+var funcemeSource = new ol.source.TileWMS({
+  url: 'http://141.89.96.184/latestwms?',
+  params: {LAYERS: 'funceme', TILED: true},
+  ratio: 1,
+  serverType: 'mapserver'
 });
 
 var demSource = new ol.source.TileWMS({
   url: 'http://141.89.96.184/latestwms?',
-  params: {LAYERS: 'dem', TILED: true}, 
-  ratio: 1, 
-  serverType: 'mapserver' 
+  params: {LAYERS: 'dem', TILED: true},
+  ratio: 1,
+  serverType: 'mapserver'
 });
 
 var watermaskTiles = new ol.layer.Tile({
@@ -302,7 +302,7 @@ var watermaskTiles = new ol.layer.Tile({
 var funcemeTiles = new ol.layer.Tile({
   name: 'funceme',
   source: funcemeSource,
-  opacity: 0.7 
+  opacity: 0.7
 });
 
 var demTiles = new ol.layer.Tile({
@@ -311,19 +311,19 @@ var demTiles = new ol.layer.Tile({
   opacity: 1
 });
 
-var view = new ol.View({ 
-  projection: 'EPSG:4326', 
-  center: [-39, -5], 
+var view = new ol.View({
+  projection: 'EPSG:4326',
+  center: [-39, -5],
   zoom: 7,
-  minZoom: 7 
+  minZoom: 7
  });
 
-var map = new ol.Map({ 
-	layers: [osmTiles, watermaskTiles, funcemeTiles], 
-	target: 'js-map', 
+var map = new ol.Map({
+	layers: [osmTiles, watermaskTiles, funcemeTiles],
+	target: 'js-map',
 	view: view
 });
-   
+
 map.on('singleclick', function(event) {
   if (map.getTargetElement().style.cursor == 'pointer') {
     var coordinate = event.coordinate;
@@ -338,12 +338,12 @@ map.on('singleclick', function(event) {
     $("#img-load").show();
     $(".panel").hide();
     $("#help").hide();
-    
+
     $.ajax({
     type: 'GET',
     url: url,
     success: function(response) {
-      cogerid = $(response).find(".id_cogerh").html();
+      cogerid = $(response).find(".id_funceme").html();
     }
     }).done(function() {
       $.ajax({
@@ -354,8 +354,8 @@ map.on('singleclick', function(event) {
           $('#feature-info-map').find(".map-container").remove();
           $('#feature-info-chart').find(".chart-container").remove();
           data = JSON.parse(response);
-          cogerid = data[0].properties.id_cogerh;
-          document.getElementById('panel-title').innerHTML = "Feature Information for Cogerh ID " + cogerid;
+          cogerid = data[0].properties.id_funceme;
+          document.getElementById('panel-title').innerHTML = "Feature Information for ID " + cogerid;
           b = boundsFromData(data);
           $("#img-load").hide();
           $("#feature-info-small").hide();
@@ -394,5 +394,5 @@ map.getView().on('change:resolution', function(e) {
 
 </script>
 
-</body> 
+</body>
 </html>

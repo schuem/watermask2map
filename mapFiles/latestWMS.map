@@ -2,58 +2,112 @@ MAP
 	NAME "wmstest"
 	EXTENT -41.413966 -7.838684 -37.279315 -2.803906
 	SIZE 800 600
-	
-	PROJECTION 
+
+	PROJECTION
 		"init=epsg:4326"
 	END
-	
+
 	WEB
 		HEADER	"../templates/latest_web_header.html"
 		FOOTER	"../templates/latest_web_footer.html"
-		METADATA
+    METADATA
 			"wms_title"						"latest watermasks WMS Demo"
 			"wms_enable_request" 			"*"
 			"ows_enable_request"			"*"
 			"ows_include_items"     		"all"
 			"wms_onlineresource"			"http://141.89.96.184/latestwms&"
-			"wms_srs"						"EPSG:4326"
+			"wms_srs"						"EPSG:4326 EPSG:3857"
 			"wms_feature_info_mime_type" 	"text/html"
-			"wms_format" 					"image/png"
+			#"wms_format" 					"image/png"
 		END
+    #TEMPPATH "/tmp/"
+    IMAGEPATH "/var/www/html/"
 	END
-	
+
+	#CONFIG "MS_ERRORFILE" "/tmp/ms_error.txt"
+
+  DEBUG 3
+
+  SYMBOL
+    NAME 'circle'
+    TYPE ELLIPSE
+    FILLED true
+    POINTS
+      1 1
+    END
+  END
+
+  LEGEND
+    STATUS ON
+    KEYSIZE 18 12
+    LABEL
+      TYPE BITMAP
+      SIZE MEDIUM
+      COLOR 0 0 89
+    END
+    TEMPLATE "../templates/legend.html"
+  END
+
   LAYER
     NAME 		watermask
-    STATUS 		ON
+    STATUS 		OFF
     TYPE 		POLYGON
     CONNECTIONTYPE 	POSTGIS
-    CONNECTION 		"host=localhost dbname=watermasks user=user password=password"
-    DATA 			"geom from (select distinct on (id_cogerh) id_cogerh, ingestion_time, area, geom, id from masks order by id_cogerh, ingestion_time desc) as subquery using unique id using srid=4326"
-    #PROCESSING 		"NATIVE_FILTER=extract(year from ingestion_time) = 2018 AND extract(month from ingestion_time) = 3"
-    
+    CONNECTION 		"host=localhost dbname=watermasks user=xxxxxx password=xxxxxx"
+    DATA 			"geom from (select distinct on (id_funceme) id_funceme, ingestion_time, area, geom, id from masks order by id_funceme, ingestion_time desc) as subquery using unique id using srid=4326"
+    #DATA 			"geom from (select distinct on (id_funceme) id_funceme, ingestion_time, area, ST_Simplify(geom,0.001,true) as geom, id from masks order by id_funceme, ingestion_time desc) as subquery using unique id using srid=4326"
+    #PROCESSING 		"NATIVE_FILTER=extract(year from ingestion_time) = 2017 AND extract(month from ingestion_time) = 12"
+    PROCESSING "CLOSE_CONNECTION=DEFER"
+
     HEADER 	 "../templates/latest_layer_header.html"
     FOOTER 	 "../templates/latest_layer_footer.html"
     TEMPLATE "../templates/latest_query.html"
-    
-    METADATA
-    	"wms_title"						"latest watermasks"
-    	"wms_feature_info_mime_type" 	"text/html"
-    	"wms_enable_request"			"*"
 
-    END
-    
     CLASS
+      NAME "watermask"
       STYLE
-        COLOR 0 0 0 
+        SYMBOL 'circle'
+        COLOR 0 0 0
       END
-    END 
+    END
+
   END
 
   LAYER
-  	NAME dem
-  	STATUS ON
-  	TYPE RASTER
-  	DATA "/home/schuettig/DEMs/dems_4326.tif"
+    NAME 		funceme
+    STATUS 		OFF
+    TYPE 		POLYGON
+    CONNECTIONTYPE 	POSTGIS
+    CONNECTION 		"host=localhost dbname=watermasks user=xxxxxx password=xxxxxx"
+    DATA 			"geom from reference using unique ogc_fid using srid=4326"
+    PROCESSING "CLOSE_CONNECTION=DEFER"
+
+    #HEADER 	 "../templates/latest_layer_header.html"
+    #FOOTER 	 "../templates/latest_layer_footer.html"
+    #TEMPLATE "../templates/latest_query.html"
+
+    CLASS
+      NAME "funceme"
+      STYLE
+        SYMBOL 'circle'
+      	OUTLINECOLOR 255 69 0
+      	WIDTH 1
+      END
+      STYLE
+        COLOR 255 69 0
+        OPACITY 0
+      END
+    END
   END
+
+  LAYER
+    NAME dem
+    STATUS OFF
+    #TILEINDEX "/home/schuettig/DEMs/dem_index.shp"
+    #TILEITEM "Location"
+    DATA "/home/schuettig/DEMs/reprojected/dems.tif"
+    #PROCESSING "CLOSE_CONNECTION=DEFER"
+    TYPE RASTER
+  END
+
 END
-		
