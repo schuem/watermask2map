@@ -324,6 +324,7 @@ var map = new ol.Map({
 	view: view
 });
 
+
 map.on('singleclick', function(event) {
   if (map.getTargetElement().style.cursor == 'pointer') {
     var coordinate = event.coordinate;
@@ -370,12 +371,20 @@ map.on('singleclick', function(event) {
           } //the funceme API request should happen somewhere here. the data should be plotted into the #feature-info-chart
         }
       })
-      .fetch('http://api.funceme.br/rest/acude/volume?reservatorio.cod=2481&dataColeta.GTE=2013-06-01')
-      .then(function() {
-          (resp) => resp.json())
-        }).catch(function(error) {
-          console.log(error);
-        });
+      // open 27017 port in ubuntu https://www.digitalocean.com/community/questions/how-do-i-open-ports-on-an-ubuntu-server
+      // allow connection from remote to mongodb https://ianlondon.github.io/blog/mongodb-auth/
+//      fetch('http://184.89.96.184:27017/sar2watermask/toponyms/?filter_id_funceme=12555')
+// get reservatorio.cod corresponding to cogerid from mongodb using mongo API. MongoDB does offer a REST webservice allowing rudimentary queries through XmlHttpRequests. To enable it, you have to start mongod with the --rest parameter. You can then query it like this:
+//
+//http://127.0.0.1:27017/sar2watermask/toponyms/?filter_id_funceme=12555
+//
+//You can query this URL with an AJAX XmlHttpRequest like any webservice. but first the file should be created in the server
+//      fetch('http://api.funceme.br/rest/acude/volume?reservatorio.cod=' + cogerid + '&dataColeta.GTE=2013-06-01')
+//        .then(function() {
+        //   (resp) => resp.json()
+        // }).catch(function(error) {
+        // console.log(error);
+        // });
       });
     }
 });
