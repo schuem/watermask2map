@@ -371,8 +371,11 @@ map.on('singleclick', function(event) {
           } //the funceme API request should happen somewhere here. the data should be plotted into the #feature-info-chart
         }
       })
+      // THE FOLLOWING IS NOT WORKING. A WORKAROUND IS https://stackoverflow.com/questions/19706046/how-to-read-an-external-local-json-file-in-javascript AND DOING SOMETHING LIKE THIS IN ORDER TO GET A FILE WITH ONLY COD AND ID_FUNCEME mongoexport -u orson -p buhayra -d sar2watermask -c toponyms --query '{"properties.id_funceme":1,"cod":1}' --jsonArray --quiet --out id_funceme.json
+
       // open 27017 port in ubuntu https://www.digitalocean.com/community/questions/how-do-i-open-ports-on-an-ubuntu-server
       // allow connection from remote to mongodb https://ianlondon.github.io/blog/mongodb-auth/
+      // used this db.createUser({ user: 'sar2water',pwd:'buhayra',roles:[{role:'read',db:'sar2watermask'}]})
 //      fetch('http://184.89.96.184:27017/sar2watermask/toponyms/?filter_id_funceme=12555')
 // get reservatorio.cod corresponding to cogerid from mongodb using mongo API. MongoDB does offer a REST webservice allowing rudimentary queries through XmlHttpRequests. To enable it, you have to start mongod with the --rest parameter. You can then query it like this:
 //
