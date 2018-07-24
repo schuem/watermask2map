@@ -32,8 +32,8 @@
     </div>
 </div>
 <div id=legend></div>
-
 <script>
+
   $(".pane").hide();
   $("#img-load").hide();
 
@@ -47,6 +47,7 @@
       $("#legend").html(response);
     }
   });
+
 
   function createFeatureTable(data, tableDiv) {
     var id = data[0].properties.id_funceme;
@@ -324,6 +325,21 @@ var map = new ol.Map({
 	view: view
 });
 
+//
+// $.get( "id_funceme.json", function( data ) {
+//   alert( "Data Loaded: " + data );
+// });
+
+// var treeData;
+//
+// var oReq = new XMLHttpRequest();
+// oReq.onload = reqListener;
+// oReq.open("get", "id_funceme.json", true);
+// oReq.send();
+//
+// function reqListener(e) {
+//     treeData = JSON.parse(this.responseText);
+// }
 
 map.on('singleclick', function(event) {
   if (map.getTargetElement().style.cursor == 'pointer') {
@@ -371,7 +387,10 @@ map.on('singleclick', function(event) {
           } //the funceme API request should happen somewhere here. the data should be plotted into the #feature-info-chart
         }
       })
-      // THE FOLLOWING IS NOT WORKING. A WORKAROUND IS https://stackoverflow.com/questions/19706046/how-to-read-an-external-local-json-file-in-javascript AND DOING SOMETHING LIKE THIS IN ORDER TO GET A FILE WITH ONLY COD AND ID_FUNCEME mongoexport -u orson -p buhayra -d sar2watermask -c toponyms --query '{"properties.id_funceme":1,"cod":1}' --jsonArray --quiet --out id_funceme.json
+      // THE FOLLOWING IS NOT WORKING. A WORKAROUND IS https://stackoverflow.com/questions/19706046/how-to-read-an-external-local-json-file-in-javascript after this:
+      // https://gist.github.com/jmigueldelgado/c0462a33ba5602cb41a19f736d736cb3
+      //var mydata = JSON.parse(data);
+
 
       // open 27017 port in ubuntu https://www.digitalocean.com/community/questions/how-do-i-open-ports-on-an-ubuntu-server
       // allow connection from remote to mongodb https://ianlondon.github.io/blog/mongodb-auth/

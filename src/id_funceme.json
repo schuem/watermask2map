@@ -1,0 +1,3649 @@
+{"reservoirs":[
+	{
+		"_id" : ObjectId("5afae93dd6d99ce22cac4edd"),
+		"properties" : {
+			"cod" : 2,
+			"id_funceme" : 12555
+		}
+	},
+	{
+		"_id" : ObjectId("5afae93dd6d99ce22cac4ede"),
+		"properties" : {
+			"cod" : 3,
+			"id_funceme" : 19667
+		}
+	},
+	{
+		"_id" : ObjectId("5afae93fd6d99ce22cac4f00"),
+		"properties" : {
+			"cod" : 44,
+			"id_funceme" : 19691
+		}
+	},
+	{
+		"_id" : ObjectId("5afae93ed6d99ce22cac4edf"),
+		"properties" : {
+			"cod" : 4,
+			"id_funceme" : 12554
+		}
+	},
+	{
+		"_id" : ObjectId("5afae93ed6d99ce22cac4ee0"),
+		"properties" : {
+			"cod" : 5,
+			"id_funceme" : 25073
+		}
+	},
+	{
+		"_id" : ObjectId("5afae93ed6d99ce22cac4ee1"),
+		"properties" : {
+			"cod" : 6,
+			"id_funceme" : 20485
+		}
+	},
+	{
+		"_id" : ObjectId("5afae93ed6d99ce22cac4ee2"),
+		"properties" : {
+			"cod" : 7,
+			"id_funceme" : 19664
+		}
+	},
+	{
+		"_id" : ObjectId("5afae93ed6d99ce22cac4ee3"),
+		"properties" : {
+			"cod" : 8,
+			"id_funceme" : 1690
+		}
+	},
+	{
+		"_id" : ObjectId("5afae93ed6d99ce22cac4ee4"),
+		"properties" : {
+			"cod" : 9,
+			"id_funceme" : 20482
+		}
+	},
+	{
+		"_id" : ObjectId("5afae93ed6d99ce22cac4ee5"),
+		"properties" : {
+			"cod" : 10,
+			"id_funceme" : 12550
+		}
+	},
+	{
+		"_id" : ObjectId("5afae93ed6d99ce22cac4ee6"),
+		"properties" : {
+			"cod" : 11,
+			"id_funceme" : 12549
+		}
+	},
+	{
+		"_id" : ObjectId("5afae93ed6d99ce22cac4ee7"),
+		"properties" : {
+			"cod" : 12,
+			"id_funceme" : 19662
+		}
+	},
+	{
+		"_id" : ObjectId("5afae93ed6d99ce22cac4ee8"),
+		"properties" : {
+			"cod" : 13,
+			"id_funceme" : 3355
+		}
+	},
+	{
+		"_id" : ObjectId("5afae93ed6d99ce22cac4ee9"),
+		"properties" : {
+			"cod" : 14,
+			"id_funceme" : 1688
+		}
+	},
+	{
+		"_id" : ObjectId("5afae93ed6d99ce22cac4eea"),
+		"properties" : {
+			"cod" : 15,
+			"id_funceme" : 1687
+		}
+	},
+	{
+		"_id" : ObjectId("5afae93ed6d99ce22cac4eeb"),
+		"properties" : {
+			"cod" : 16,
+			"id_funceme" : 12546
+		}
+	},
+	{
+		"_id" : ObjectId("5afae93ed6d99ce22cac4eec"),
+		"properties" : {
+			"cod" : 17,
+			"id_funceme" : 7013
+		}
+	},
+	{
+		"_id" : ObjectId("5afae93ed6d99ce22cac4eed"),
+		"properties" : {
+			"cod" : 18,
+			"id_funceme" : 19661
+		}
+	},
+	{
+		"_id" : ObjectId("5afae93fd6d99ce22cac4eff"),
+		"properties" : {
+			"cod" : 43,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae93ed6d99ce22cac4eee"),
+		"properties" : {
+			"cod" : 19,
+			"id_funceme" : 18365
+		}
+	},
+	{
+		"_id" : ObjectId("5afae93ed6d99ce22cac4eef"),
+		"properties" : {
+			"cod" : 20,
+			"id_funceme" : 19659
+		}
+	},
+	{
+		"_id" : ObjectId("5afae93ed6d99ce22cac4ef0"),
+		"properties" : {
+			"cod" : 21,
+			"id_funceme" : 11536
+		}
+	},
+	{
+		"_id" : ObjectId("5afae93ed6d99ce22cac4ef1"),
+		"properties" : {
+			"cod" : 22,
+			"id_funceme" : 25074
+		}
+	},
+	{
+		"_id" : ObjectId("5afae93ed6d99ce22cac4ef2"),
+		"properties" : {
+			"cod" : 23,
+			"id_funceme" : 1684
+		}
+	},
+	{
+		"_id" : ObjectId("5afae93ed6d99ce22cac4ef3"),
+		"properties" : {
+			"cod" : 24,
+			"id_funceme" : 20477
+		}
+	},
+	{
+		"_id" : ObjectId("5afae93fd6d99ce22cac4ef4"),
+		"properties" : {
+			"cod" : 25,
+			"id_funceme" : 20474
+		}
+	},
+	{
+		"_id" : ObjectId("5afae93fd6d99ce22cac4ef5"),
+		"properties" : {
+			"cod" : 26,
+			"id_funceme" : 7015
+		}
+	},
+	{
+		"_id" : ObjectId("5afae93fd6d99ce22cac4ef6"),
+		"properties" : {
+			"cod" : 27,
+			"id_funceme" : 20480
+		}
+	},
+	{
+		"_id" : ObjectId("5afae93fd6d99ce22cac4ef7"),
+		"properties" : {
+			"cod" : 28,
+			"id_funceme" : 7017
+		}
+	},
+	{
+		"_id" : ObjectId("5afae93fd6d99ce22cac4ef8"),
+		"properties" : {
+			"cod" : 30,
+			"id_funceme" : 7019
+		}
+	},
+	{
+		"_id" : ObjectId("5afae93fd6d99ce22cac4ef9"),
+		"properties" : {
+			"cod" : 31,
+			"id_funceme" : 25068
+		}
+	},
+	{
+		"_id" : ObjectId("5afae93fd6d99ce22cac4efa"),
+		"properties" : {
+			"cod" : 32,
+			"id_funceme" : 7022
+		}
+	},
+	{
+		"_id" : ObjectId("5afae93fd6d99ce22cac4efb"),
+		"properties" : {
+			"cod" : 33,
+			"id_funceme" : 12556
+		}
+	},
+	{
+		"_id" : ObjectId("5afae93fd6d99ce22cac4efc"),
+		"properties" : {
+			"cod" : 34,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae93fd6d99ce22cac4efd"),
+		"properties" : {
+			"cod" : 36,
+			"id_funceme" : 1692
+		}
+	},
+	{
+		"_id" : ObjectId("5afae93fd6d99ce22cac4efe"),
+		"properties" : {
+			"cod" : 39,
+			"id_funceme" : 12545
+		}
+	},
+	{
+		"_id" : ObjectId("5afae93fd6d99ce22cac4f01"),
+		"properties" : {
+			"cod" : 45,
+			"id_funceme" : 3365
+		}
+	},
+	{
+		"_id" : ObjectId("5afae93fd6d99ce22cac4f02"),
+		"properties" : {
+			"cod" : 47,
+			"id_funceme" : 1695
+		}
+	},
+	{
+		"_id" : ObjectId("5afae93fd6d99ce22cac4f03"),
+		"properties" : {
+			"cod" : 49,
+			"id_funceme" : 25077
+		}
+	},
+	{
+		"_id" : ObjectId("5afae93fd6d99ce22cac4f04"),
+		"properties" : {
+			"cod" : 50,
+			"id_funceme" : 11534
+		}
+	},
+	{
+		"_id" : ObjectId("5afae93fd6d99ce22cac4f05"),
+		"properties" : {
+			"cod" : 51,
+			"id_funceme" : 25076
+		}
+	},
+	{
+		"_id" : ObjectId("5afae93fd6d99ce22cac4f06"),
+		"properties" : {
+			"cod" : 52,
+			"id_funceme" : 1698
+		}
+	},
+	{
+		"_id" : ObjectId("5afae93fd6d99ce22cac4f07"),
+		"properties" : {
+			"cod" : 53,
+			"id_funceme" : 1703
+		}
+	},
+	{
+		"_id" : ObjectId("5afae93fd6d99ce22cac4f08"),
+		"properties" : {
+			"cod" : 54,
+			"id_funceme" : 1697
+		}
+	},
+	{
+		"_id" : ObjectId("5afae940d6d99ce22cac4f09"),
+		"properties" : {
+			"cod" : 55,
+			"id_funceme" : 11535
+		}
+	},
+	{
+		"_id" : ObjectId("5afae940d6d99ce22cac4f0a"),
+		"properties" : {
+			"cod" : 56,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae940d6d99ce22cac4f0b"),
+		"properties" : {
+			"cod" : 58,
+			"id_funceme" : 19026
+		}
+	},
+	{
+		"_id" : ObjectId("5afae940d6d99ce22cac4f0c"),
+		"properties" : {
+			"cod" : 59,
+			"id_funceme" : 25071
+		}
+	},
+	{
+		"_id" : ObjectId("5afae940d6d99ce22cac4f0d"),
+		"properties" : {
+			"cod" : 60,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae940d6d99ce22cac4f0e"),
+		"properties" : {
+			"cod" : 61,
+			"id_funceme" : 11540
+		}
+	},
+	{
+		"_id" : ObjectId("5afae940d6d99ce22cac4f0f"),
+		"properties" : {
+			"cod" : 62,
+			"id_funceme" : 19028
+		}
+	},
+	{
+		"_id" : ObjectId("5afae940d6d99ce22cac4f10"),
+		"properties" : {
+			"cod" : 63,
+			"id_funceme" : 1691
+		}
+	},
+	{
+		"_id" : ObjectId("5afae940d6d99ce22cac4f11"),
+		"properties" : {
+			"cod" : 64,
+			"id_funceme" : 26626
+		}
+	},
+	{
+		"_id" : ObjectId("5afae940d6d99ce22cac4f12"),
+		"properties" : {
+			"cod" : 65,
+			"id_funceme" : 25072
+		}
+	},
+	{
+		"_id" : ObjectId("5afae940d6d99ce22cac4f13"),
+		"properties" : {
+			"cod" : 66,
+			"id_funceme" : 1696
+		}
+	},
+	{
+		"_id" : ObjectId("5afae940d6d99ce22cac4f14"),
+		"properties" : {
+			"cod" : 67,
+			"id_funceme" : 12547
+		}
+	},
+	{
+		"_id" : ObjectId("5afae940d6d99ce22cac4f15"),
+		"properties" : {
+			"cod" : 68,
+			"id_funceme" : 20479
+		}
+	},
+	{
+		"_id" : ObjectId("5afae940d6d99ce22cac4f16"),
+		"properties" : {
+			"cod" : 69,
+			"id_funceme" : 1699
+		}
+	},
+	{
+		"_id" : ObjectId("5afae940d6d99ce22cac4f17"),
+		"properties" : {
+			"cod" : 70,
+			"id_funceme" : 19025
+		}
+	},
+	{
+		"_id" : ObjectId("5afae940d6d99ce22cac4f18"),
+		"properties" : {
+			"cod" : 72,
+			"id_funceme" : 20484
+		}
+	},
+	{
+		"_id" : ObjectId("5afae940d6d99ce22cac4f19"),
+		"properties" : {
+			"cod" : 74,
+			"id_funceme" : 8146
+		}
+	},
+	{
+		"_id" : ObjectId("5afae940d6d99ce22cac4f1a"),
+		"properties" : {
+			"cod" : 75,
+			"id_funceme" : 1685
+		}
+	},
+	{
+		"_id" : ObjectId("5afae940d6d99ce22cac4f1b"),
+		"properties" : {
+			"cod" : 77,
+			"id_funceme" : 19665
+		}
+	},
+	{
+		"_id" : ObjectId("5afae940d6d99ce22cac4f1c"),
+		"properties" : {
+			"cod" : 78,
+			"id_funceme" : 3366
+		}
+	},
+	{
+		"_id" : ObjectId("5afae940d6d99ce22cac4f1d"),
+		"properties" : {
+			"cod" : 79,
+			"id_funceme" : 11537
+		}
+	},
+	{
+		"_id" : ObjectId("5afae941d6d99ce22cac4f1e"),
+		"properties" : {
+			"cod" : 80,
+			"id_funceme" : 3358
+		}
+	},
+	{
+		"_id" : ObjectId("5afae941d6d99ce22cac4f1f"),
+		"properties" : {
+			"cod" : 81,
+			"id_funceme" : 25075
+		}
+	},
+	{
+		"_id" : ObjectId("5afae941d6d99ce22cac4f20"),
+		"properties" : {
+			"cod" : 82,
+			"id_funceme" : 7014
+		}
+	},
+	{
+		"_id" : ObjectId("5afae941d6d99ce22cac4f21"),
+		"properties" : {
+			"cod" : 83,
+			"id_funceme" : 25078
+		}
+	},
+	{
+		"_id" : ObjectId("5afae941d6d99ce22cac4f22"),
+		"properties" : {
+			"cod" : 84,
+			"id_funceme" : 12553
+		}
+	},
+	{
+		"_id" : ObjectId("5afae941d6d99ce22cac4f23"),
+		"properties" : {
+			"cod" : 85,
+			"id_funceme" : 12544
+		}
+	},
+	{
+		"_id" : ObjectId("5afae941d6d99ce22cac4f24"),
+		"properties" : {
+			"cod" : 88,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae941d6d99ce22cac4f25"),
+		"properties" : {
+			"cod" : 89,
+			"id_funceme" : 20473
+		}
+	},
+	{
+		"_id" : ObjectId("5afae941d6d99ce22cac4f26"),
+		"properties" : {
+			"cod" : 90,
+			"id_funceme" : 11538
+		}
+	},
+	{
+		"_id" : ObjectId("5afae941d6d99ce22cac4f27"),
+		"properties" : {
+			"cod" : 92,
+			"id_funceme" : 19657
+		}
+	},
+	{
+		"_id" : ObjectId("5afae941d6d99ce22cac4f28"),
+		"properties" : {
+			"cod" : 95,
+			"id_funceme" : 3360
+		}
+	},
+	{
+		"_id" : ObjectId("5afae941d6d99ce22cac4f29"),
+		"properties" : {
+			"cod" : 96,
+			"id_funceme" : 12542
+		}
+	},
+	{
+		"_id" : ObjectId("5afae941d6d99ce22cac4f2a"),
+		"properties" : {
+			"cod" : 97,
+			"id_funceme" : 3363
+		}
+	},
+	{
+		"_id" : ObjectId("5afae941d6d99ce22cac4f2b"),
+		"properties" : {
+			"cod" : 99,
+			"id_funceme" : 12543
+		}
+	},
+	{
+		"_id" : ObjectId("5afae941d6d99ce22cac4f2c"),
+		"properties" : {
+			"cod" : 109,
+			"id_funceme" : 25079
+		}
+	},
+	{
+		"_id" : ObjectId("5afae941d6d99ce22cac4f2d"),
+		"properties" : {
+			"cod" : 110,
+			"id_funceme" : 20475
+		}
+	},
+	{
+		"_id" : ObjectId("5afae941d6d99ce22cac4f2e"),
+		"properties" : {
+			"cod" : 111,
+			"id_funceme" : 9736
+		}
+	},
+	{
+		"_id" : ObjectId("5afae941d6d99ce22cac4f2f"),
+		"properties" : {
+			"cod" : 112,
+			"id_funceme" : 19033
+		}
+	},
+	{
+		"_id" : ObjectId("5afae941d6d99ce22cac4f30"),
+		"properties" : {
+			"cod" : 117,
+			"id_funceme" : 3354
+		}
+	},
+	{
+		"_id" : ObjectId("5afae941d6d99ce22cac4f31"),
+		"properties" : {
+			"cod" : 119,
+			"id_funceme" : 12552
+		}
+	},
+	{
+		"_id" : ObjectId("5afae941d6d99ce22cac4f32"),
+		"properties" : {
+			"cod" : 121,
+			"id_funceme" : 19663
+		}
+	},
+	{
+		"_id" : ObjectId("5afae941d6d99ce22cac4f33"),
+		"properties" : {
+			"cod" : 122,
+			"id_funceme" : 20476
+		}
+	},
+	{
+		"_id" : ObjectId("5afae941d6d99ce22cac4f34"),
+		"properties" : {
+			"cod" : 125,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae942d6d99ce22cac4f35"),
+		"properties" : {
+			"cod" : 126,
+			"id_funceme" : 19029
+		}
+	},
+	{
+		"_id" : ObjectId("5afae942d6d99ce22cac4f36"),
+		"properties" : {
+			"cod" : 127,
+			"id_funceme" : 20487
+		}
+	},
+	{
+		"_id" : ObjectId("5afae942d6d99ce22cac4f37"),
+		"properties" : {
+			"cod" : 129,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae942d6d99ce22cac4f38"),
+		"properties" : {
+			"cod" : 130,
+			"id_funceme" : 12541
+		}
+	},
+	{
+		"_id" : ObjectId("5afae942d6d99ce22cac4f39"),
+		"properties" : {
+			"cod" : 132,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae942d6d99ce22cac4f3a"),
+		"properties" : {
+			"cod" : 133,
+			"id_funceme" : 1702
+		}
+	},
+	{
+		"_id" : ObjectId("5afae942d6d99ce22cac4f3b"),
+		"properties" : {
+			"cod" : 134,
+			"id_funceme" : 24208
+		}
+	},
+	{
+		"_id" : ObjectId("5afae942d6d99ce22cac4f3c"),
+		"properties" : {
+			"cod" : 135,
+			"id_funceme" : 16370
+		}
+	},
+	{
+		"_id" : ObjectId("5afae942d6d99ce22cac4f3d"),
+		"properties" : {
+			"cod" : 141,
+			"id_funceme" : 19660
+		}
+	},
+	{
+		"_id" : ObjectId("5afae942d6d99ce22cac4f3e"),
+		"properties" : {
+			"cod" : 147,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae942d6d99ce22cac4f3f"),
+		"properties" : {
+			"cod" : 148,
+			"id_funceme" : 20481
+		}
+	},
+	{
+		"_id" : ObjectId("5afae942d6d99ce22cac4f40"),
+		"properties" : {
+			"cod" : 155,
+			"id_funceme" : 1689
+		}
+	},
+	{
+		"_id" : ObjectId("5afae942d6d99ce22cac4f41"),
+		"properties" : {
+			"cod" : 158,
+			"id_funceme" : 3361
+		}
+	},
+	{
+		"_id" : ObjectId("5afae942d6d99ce22cac4f42"),
+		"properties" : {
+			"cod" : 159,
+			"id_funceme" : 3353
+		}
+	},
+	{
+		"_id" : ObjectId("5afae942d6d99ce22cac4f43"),
+		"properties" : {
+			"cod" : 160,
+			"id_funceme" : 19658
+		}
+	},
+	{
+		"_id" : ObjectId("5afae942d6d99ce22cac4f44"),
+		"properties" : {
+			"cod" : 161,
+			"id_funceme" : 12540
+		}
+	},
+	{
+		"_id" : ObjectId("5afae942d6d99ce22cac4f45"),
+		"properties" : {
+			"cod" : 162,
+			"id_funceme" : 1683
+		}
+	},
+	{
+		"_id" : ObjectId("5afae942d6d99ce22cac4f46"),
+		"properties" : {
+			"cod" : 163,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae942d6d99ce22cac4f47"),
+		"properties" : {
+			"cod" : 164,
+			"id_funceme" : 7016
+		}
+	},
+	{
+		"_id" : ObjectId("5afae943d6d99ce22cac4f48"),
+		"properties" : {
+			"cod" : 166,
+			"id_funceme" : 11113
+		}
+	},
+	{
+		"_id" : ObjectId("5afae943d6d99ce22cac4f49"),
+		"properties" : {
+			"cod" : 167,
+			"id_funceme" : 12548
+		}
+	},
+	{
+		"_id" : ObjectId("5afae943d6d99ce22cac4f4a"),
+		"properties" : {
+			"cod" : 168,
+			"id_funceme" : 20483
+		}
+	},
+	{
+		"_id" : ObjectId("5afae943d6d99ce22cac4f4b"),
+		"properties" : {
+			"cod" : 169,
+			"id_funceme" : 19031
+		}
+	},
+	{
+		"_id" : ObjectId("5afae943d6d99ce22cac4f4c"),
+		"properties" : {
+			"cod" : 170,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae943d6d99ce22cac4f4d"),
+		"properties" : {
+			"cod" : 171,
+			"id_funceme" : 7018
+		}
+	},
+	{
+		"_id" : ObjectId("5afae943d6d99ce22cac4f4e"),
+		"properties" : {
+			"cod" : 172,
+			"id_funceme" : 1700
+		}
+	},
+	{
+		"_id" : ObjectId("5afae943d6d99ce22cac4f4f"),
+		"properties" : {
+			"cod" : 173,
+			"id_funceme" : 4677
+		}
+	},
+	{
+		"_id" : ObjectId("5afae943d6d99ce22cac4f50"),
+		"properties" : {
+			"cod" : 174,
+			"id_funceme" : 20478
+		}
+	},
+	{
+		"_id" : ObjectId("5afae943d6d99ce22cac4f51"),
+		"properties" : {
+			"cod" : 177,
+			"id_funceme" : 20488
+		}
+	},
+	{
+		"_id" : ObjectId("5afae943d6d99ce22cac4f52"),
+		"properties" : {
+			"cod" : 178,
+			"id_funceme" : 19666
+		}
+	},
+	{
+		"_id" : ObjectId("5afae943d6d99ce22cac4f53"),
+		"properties" : {
+			"cod" : 179,
+			"id_funceme" : 3356
+		}
+	},
+	{
+		"_id" : ObjectId("5afae943d6d99ce22cac4f54"),
+		"properties" : {
+			"cod" : 180,
+			"id_funceme" : 19030
+		}
+	},
+	{
+		"_id" : ObjectId("5afae943d6d99ce22cac4f55"),
+		"properties" : {
+			"cod" : 181,
+			"id_funceme" : 1686
+		}
+	},
+	{
+		"_id" : ObjectId("5afae943d6d99ce22cac4f56"),
+		"properties" : {
+			"cod" : 185,
+			"id_funceme" : 3332
+		}
+	},
+	{
+		"_id" : ObjectId("5afae943d6d99ce22cac4f57"),
+		"properties" : {
+			"cod" : 186,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae943d6d99ce22cac4f58"),
+		"properties" : {
+			"cod" : 189,
+			"id_funceme" : 99
+		}
+	},
+	{
+		"_id" : ObjectId("5afae944d6d99ce22cac4f59"),
+		"properties" : {
+			"cod" : 190,
+			"id_funceme" : 68
+		}
+	},
+	{
+		"_id" : ObjectId("5afae944d6d99ce22cac4f5a"),
+		"properties" : {
+			"cod" : 191,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae944d6d99ce22cac4f5b"),
+		"properties" : {
+			"cod" : 192,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae944d6d99ce22cac4f5c"),
+		"properties" : {
+			"cod" : 194,
+			"id_funceme" : 7020
+		}
+	},
+	{
+		"_id" : ObjectId("5afae944d6d99ce22cac4f5d"),
+		"properties" : {
+			"cod" : 197,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae944d6d99ce22cac4f5e"),
+		"properties" : {
+			"cod" : 199,
+			"id_funceme" : 4271
+		}
+	},
+	{
+		"_id" : ObjectId("5afae944d6d99ce22cac4f5f"),
+		"properties" : {
+			"cod" : 201,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae944d6d99ce22cac4f60"),
+		"properties" : {
+			"cod" : 202,
+			"id_funceme" : 2061
+		}
+	},
+	{
+		"_id" : ObjectId("5afae944d6d99ce22cac4f61"),
+		"properties" : {
+			"cod" : 205,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae944d6d99ce22cac4f62"),
+		"properties" : {
+			"cod" : 206,
+			"id_funceme" : 24347
+		}
+	},
+	{
+		"_id" : ObjectId("5afae944d6d99ce22cac4f63"),
+		"properties" : {
+			"cod" : 208,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae944d6d99ce22cac4f64"),
+		"properties" : {
+			"cod" : 210,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae944d6d99ce22cac4f65"),
+		"properties" : {
+			"cod" : 211,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae944d6d99ce22cac4f66"),
+		"properties" : {
+			"cod" : 212,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae944d6d99ce22cac4f67"),
+		"properties" : {
+			"cod" : 213,
+			"id_funceme" : 26305
+		}
+	},
+	{
+		"_id" : ObjectId("5afae944d6d99ce22cac4f68"),
+		"properties" : {
+			"cod" : 215,
+			"id_funceme" : 19545
+		}
+	},
+	{
+		"_id" : ObjectId("5afae944d6d99ce22cac4f69"),
+		"properties" : {
+			"cod" : 216,
+			"id_funceme" : 26686
+		}
+	},
+	{
+		"_id" : ObjectId("5afae945d6d99ce22cac4f6a"),
+		"properties" : {
+			"cod" : 217,
+			"id_funceme" : 22475
+		}
+	},
+	{
+		"_id" : ObjectId("5afae945d6d99ce22cac4f6b"),
+		"properties" : {
+			"cod" : 220,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae945d6d99ce22cac4f6c"),
+		"properties" : {
+			"cod" : 223,
+			"id_funceme" : 3362
+		}
+	},
+	{
+		"_id" : ObjectId("5afae945d6d99ce22cac4f6d"),
+		"properties" : {
+			"cod" : 233,
+			"id_funceme" : 8134
+		}
+	},
+	{
+		"_id" : ObjectId("5afae945d6d99ce22cac4f6e"),
+		"properties" : {
+			"cod" : 234,
+			"id_funceme" : 3364
+		}
+	},
+	{
+		"_id" : ObjectId("5afae945d6d99ce22cac4f6f"),
+		"properties" : {
+			"cod" : 235,
+			"id_funceme" : 3359
+		}
+	},
+	{
+		"_id" : ObjectId("5afae945d6d99ce22cac4f70"),
+		"properties" : {
+			"cod" : 236,
+			"id_funceme" : 25069
+		}
+	},
+	{
+		"_id" : ObjectId("5afae945d6d99ce22cac4f71"),
+		"properties" : {
+			"cod" : 239,
+			"id_funceme" : 22943
+		}
+	},
+	{
+		"_id" : ObjectId("5afae945d6d99ce22cac4f72"),
+		"properties" : {
+			"cod" : 240,
+			"id_funceme" : 20489
+		}
+	},
+	{
+		"_id" : ObjectId("5afae945d6d99ce22cac4f73"),
+		"properties" : {
+			"cod" : 244,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae945d6d99ce22cac4f74"),
+		"properties" : {
+			"cod" : 254,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae945d6d99ce22cac4f75"),
+		"properties" : {
+			"cod" : 1119,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae945d6d99ce22cac4f76"),
+		"properties" : {
+			"cod" : 1120,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae945d6d99ce22cac4f77"),
+		"properties" : {
+			"cod" : 1123,
+			"id_funceme" : 12163
+		}
+	},
+	{
+		"_id" : ObjectId("5afae945d6d99ce22cac4f78"),
+		"properties" : {
+			"cod" : 1124,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae946d6d99ce22cac4f79"),
+		"properties" : {
+			"cod" : 2001,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae946d6d99ce22cac4f7a"),
+		"properties" : {
+			"cod" : 2002,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae946d6d99ce22cac4f7b"),
+		"properties" : {
+			"cod" : 2003,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae946d6d99ce22cac4f7c"),
+		"properties" : {
+			"cod" : 2004,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae946d6d99ce22cac4f7d"),
+		"properties" : {
+			"cod" : 2005,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae946d6d99ce22cac4f7e"),
+		"properties" : {
+			"cod" : 2006,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae946d6d99ce22cac4f7f"),
+		"properties" : {
+			"cod" : 2007,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae946d6d99ce22cac4f80"),
+		"properties" : {
+			"cod" : 2008,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae946d6d99ce22cac4f81"),
+		"properties" : {
+			"cod" : 2009,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae946d6d99ce22cac4f82"),
+		"properties" : {
+			"cod" : 2010,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae946d6d99ce22cac4f83"),
+		"properties" : {
+			"cod" : 2011,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae946d6d99ce22cac4f84"),
+		"properties" : {
+			"cod" : 2012,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae946d6d99ce22cac4f85"),
+		"properties" : {
+			"cod" : 2013,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae946d6d99ce22cac4f86"),
+		"properties" : {
+			"cod" : 2014,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae946d6d99ce22cac4f87"),
+		"properties" : {
+			"cod" : 2015,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae947d6d99ce22cac4f88"),
+		"properties" : {
+			"cod" : 2016,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae947d6d99ce22cac4f89"),
+		"properties" : {
+			"cod" : 2017,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae947d6d99ce22cac4f8a"),
+		"properties" : {
+			"cod" : 2018,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae947d6d99ce22cac4f8b"),
+		"properties" : {
+			"cod" : 2019,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae947d6d99ce22cac4f8c"),
+		"properties" : {
+			"cod" : 2020,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae947d6d99ce22cac4f8d"),
+		"properties" : {
+			"cod" : 2021,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae947d6d99ce22cac4f8e"),
+		"properties" : {
+			"cod" : 2022,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae947d6d99ce22cac4f8f"),
+		"properties" : {
+			"cod" : 2023,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae947d6d99ce22cac4f90"),
+		"properties" : {
+			"cod" : 2024,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae947d6d99ce22cac4f91"),
+		"properties" : {
+			"cod" : 2025,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae947d6d99ce22cac4f92"),
+		"properties" : {
+			"cod" : 2026,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae947d6d99ce22cac4f93"),
+		"properties" : {
+			"cod" : 2027,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae947d6d99ce22cac4f94"),
+		"properties" : {
+			"cod" : 2028,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae947d6d99ce22cac4f95"),
+		"properties" : {
+			"cod" : 2029,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae948d6d99ce22cac4f96"),
+		"properties" : {
+			"cod" : 2030,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae948d6d99ce22cac4f97"),
+		"properties" : {
+			"cod" : 2031,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae948d6d99ce22cac4f98"),
+		"properties" : {
+			"cod" : 2032,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae948d6d99ce22cac4f99"),
+		"properties" : {
+			"cod" : 2033,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae948d6d99ce22cac4f9a"),
+		"properties" : {
+			"cod" : 2034,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae948d6d99ce22cac4f9b"),
+		"properties" : {
+			"cod" : 2035,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae948d6d99ce22cac4f9c"),
+		"properties" : {
+			"cod" : 2036,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae948d6d99ce22cac4f9d"),
+		"properties" : {
+			"cod" : 2037,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae948d6d99ce22cac4f9e"),
+		"properties" : {
+			"cod" : 2038,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae948d6d99ce22cac4f9f"),
+		"properties" : {
+			"cod" : 2039,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae948d6d99ce22cac4fa0"),
+		"properties" : {
+			"cod" : 2040,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae948d6d99ce22cac4fa1"),
+		"properties" : {
+			"cod" : 2041,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae948d6d99ce22cac4fa2"),
+		"properties" : {
+			"cod" : 2042,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae949d6d99ce22cac4fa3"),
+		"properties" : {
+			"cod" : 2043,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae949d6d99ce22cac4fa4"),
+		"properties" : {
+			"cod" : 2044,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae949d6d99ce22cac4fa5"),
+		"properties" : {
+			"cod" : 2045,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae949d6d99ce22cac4fa6"),
+		"properties" : {
+			"cod" : 2046,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae949d6d99ce22cac4fa7"),
+		"properties" : {
+			"cod" : 2047,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae949d6d99ce22cac4fa8"),
+		"properties" : {
+			"cod" : 2048,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae949d6d99ce22cac4fa9"),
+		"properties" : {
+			"cod" : 2049,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae949d6d99ce22cac4faa"),
+		"properties" : {
+			"cod" : 2050,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae949d6d99ce22cac4fab"),
+		"properties" : {
+			"cod" : 2051,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae949d6d99ce22cac4fac"),
+		"properties" : {
+			"cod" : 2052,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae949d6d99ce22cac4fad"),
+		"properties" : {
+			"cod" : 2053,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae949d6d99ce22cac4fae"),
+		"properties" : {
+			"cod" : 2054,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae949d6d99ce22cac4faf"),
+		"properties" : {
+			"cod" : 2194,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae949d6d99ce22cac4fb0"),
+		"properties" : {
+			"cod" : 2195,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae949d6d99ce22cac4fb1"),
+		"properties" : {
+			"cod" : 2196,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae949d6d99ce22cac4fb2"),
+		"properties" : {
+			"cod" : 2197,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae949d6d99ce22cac4fb3"),
+		"properties" : {
+			"cod" : 2198,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae949d6d99ce22cac4fb4"),
+		"properties" : {
+			"cod" : 2199,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94ad6d99ce22cac4fb5"),
+		"properties" : {
+			"cod" : 2200,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94ad6d99ce22cac4fb6"),
+		"properties" : {
+			"cod" : 2201,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94ad6d99ce22cac4fb7"),
+		"properties" : {
+			"cod" : 2202,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94ad6d99ce22cac4fb8"),
+		"properties" : {
+			"cod" : 2203,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94ad6d99ce22cac4fb9"),
+		"properties" : {
+			"cod" : 2204,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94ad6d99ce22cac4fba"),
+		"properties" : {
+			"cod" : 2205,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94ad6d99ce22cac4fbb"),
+		"properties" : {
+			"cod" : 2206,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94ad6d99ce22cac4fbc"),
+		"properties" : {
+			"cod" : 2207,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94ad6d99ce22cac4fbd"),
+		"properties" : {
+			"cod" : 2208,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94ad6d99ce22cac4fbe"),
+		"properties" : {
+			"cod" : 2209,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94ad6d99ce22cac4fbf"),
+		"properties" : {
+			"cod" : 2210,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94ad6d99ce22cac4fc0"),
+		"properties" : {
+			"cod" : 2211,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94ad6d99ce22cac4fc1"),
+		"properties" : {
+			"cod" : 2212,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94ad6d99ce22cac4fc2"),
+		"properties" : {
+			"cod" : 2213,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94ad6d99ce22cac4fc3"),
+		"properties" : {
+			"cod" : 2214,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94ad6d99ce22cac4fc4"),
+		"properties" : {
+			"cod" : 2215,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94ad6d99ce22cac4fc5"),
+		"properties" : {
+			"cod" : 2216,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94ad6d99ce22cac4fc6"),
+		"properties" : {
+			"cod" : 2217,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94bd6d99ce22cac4fc7"),
+		"properties" : {
+			"cod" : 2218,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94bd6d99ce22cac4fc8"),
+		"properties" : {
+			"cod" : 2219,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94bd6d99ce22cac4fc9"),
+		"properties" : {
+			"cod" : 2220,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94bd6d99ce22cac4fca"),
+		"properties" : {
+			"cod" : 2221,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94bd6d99ce22cac4fcb"),
+		"properties" : {
+			"cod" : 2222,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94bd6d99ce22cac4fcc"),
+		"properties" : {
+			"cod" : 2223,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94bd6d99ce22cac4fcd"),
+		"properties" : {
+			"cod" : 2224,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94bd6d99ce22cac4fce"),
+		"properties" : {
+			"cod" : 2225,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94bd6d99ce22cac4fcf"),
+		"properties" : {
+			"cod" : 2226,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94bd6d99ce22cac4fd0"),
+		"properties" : {
+			"cod" : 2227,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94bd6d99ce22cac4fd1"),
+		"properties" : {
+			"cod" : 2228,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94bd6d99ce22cac4fd2"),
+		"properties" : {
+			"cod" : 2229,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94bd6d99ce22cac4fd3"),
+		"properties" : {
+			"cod" : 2230,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94bd6d99ce22cac4fd4"),
+		"properties" : {
+			"cod" : 2231,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94bd6d99ce22cac4fd5"),
+		"properties" : {
+			"cod" : 2232,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94bd6d99ce22cac4fd6"),
+		"properties" : {
+			"cod" : 2233,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94bd6d99ce22cac4fd7"),
+		"properties" : {
+			"cod" : 2234,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94bd6d99ce22cac4fd8"),
+		"properties" : {
+			"cod" : 2235,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94bd6d99ce22cac4fd9"),
+		"properties" : {
+			"cod" : 2236,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94bd6d99ce22cac4fda"),
+		"properties" : {
+			"cod" : 2237,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94bd6d99ce22cac4fdb"),
+		"properties" : {
+			"cod" : 2238,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94bd6d99ce22cac4fdc"),
+		"properties" : {
+			"cod" : 2239,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94cd6d99ce22cac4fdd"),
+		"properties" : {
+			"cod" : 2240,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94cd6d99ce22cac4fde"),
+		"properties" : {
+			"cod" : 2241,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94cd6d99ce22cac4fdf"),
+		"properties" : {
+			"cod" : 2242,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94cd6d99ce22cac4fe0"),
+		"properties" : {
+			"cod" : 2243,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94cd6d99ce22cac4fe1"),
+		"properties" : {
+			"cod" : 2244,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94cd6d99ce22cac4fe2"),
+		"properties" : {
+			"cod" : 2245,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94cd6d99ce22cac4fe3"),
+		"properties" : {
+			"cod" : 2246,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94cd6d99ce22cac4fe4"),
+		"properties" : {
+			"cod" : 2247,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94cd6d99ce22cac4fe5"),
+		"properties" : {
+			"cod" : 2248,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94cd6d99ce22cac4fe6"),
+		"properties" : {
+			"cod" : 2249,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94cd6d99ce22cac4fe7"),
+		"properties" : {
+			"cod" : 2250,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94cd6d99ce22cac4fe8"),
+		"properties" : {
+			"cod" : 2251,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94cd6d99ce22cac4fe9"),
+		"properties" : {
+			"cod" : 2252,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94cd6d99ce22cac4fea"),
+		"properties" : {
+			"cod" : 2253,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94cd6d99ce22cac4feb"),
+		"properties" : {
+			"cod" : 2254,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94cd6d99ce22cac4fec"),
+		"properties" : {
+			"cod" : 2255,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94cd6d99ce22cac4fed"),
+		"properties" : {
+			"cod" : 2256,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94cd6d99ce22cac4fee"),
+		"properties" : {
+			"cod" : 2257,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94cd6d99ce22cac4fef"),
+		"properties" : {
+			"cod" : 2258,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94cd6d99ce22cac4ff0"),
+		"properties" : {
+			"cod" : 2259,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94cd6d99ce22cac4ff1"),
+		"properties" : {
+			"cod" : 2260,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94dd6d99ce22cac4ff2"),
+		"properties" : {
+			"cod" : 2261,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94dd6d99ce22cac4ff3"),
+		"properties" : {
+			"cod" : 2262,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94dd6d99ce22cac4ff4"),
+		"properties" : {
+			"cod" : 2263,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94dd6d99ce22cac4ff5"),
+		"properties" : {
+			"cod" : 2264,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94dd6d99ce22cac4ff6"),
+		"properties" : {
+			"cod" : 2265,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94dd6d99ce22cac4ff7"),
+		"properties" : {
+			"cod" : 2266,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94dd6d99ce22cac4ff8"),
+		"properties" : {
+			"cod" : 2267,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94dd6d99ce22cac4ff9"),
+		"properties" : {
+			"cod" : 2268,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94dd6d99ce22cac4ffa"),
+		"properties" : {
+			"cod" : 2269,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94dd6d99ce22cac4ffb"),
+		"properties" : {
+			"cod" : 2270,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94dd6d99ce22cac4ffc"),
+		"properties" : {
+			"cod" : 2271,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94dd6d99ce22cac4ffd"),
+		"properties" : {
+			"cod" : 2272,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94dd6d99ce22cac4ffe"),
+		"properties" : {
+			"cod" : 2273,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94dd6d99ce22cac4fff"),
+		"properties" : {
+			"cod" : 2274,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94dd6d99ce22cac5000"),
+		"properties" : {
+			"cod" : 2275,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94dd6d99ce22cac5001"),
+		"properties" : {
+			"cod" : 2276,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94dd6d99ce22cac5002"),
+		"properties" : {
+			"cod" : 2277,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94dd6d99ce22cac5003"),
+		"properties" : {
+			"cod" : 2278,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94dd6d99ce22cac5004"),
+		"properties" : {
+			"cod" : 2279,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94dd6d99ce22cac5005"),
+		"properties" : {
+			"cod" : 2280,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94dd6d99ce22cac5006"),
+		"properties" : {
+			"cod" : 2281,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94ed6d99ce22cac5007"),
+		"properties" : {
+			"cod" : 2282,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94ed6d99ce22cac5008"),
+		"properties" : {
+			"cod" : 2283,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94ed6d99ce22cac5009"),
+		"properties" : {
+			"cod" : 2284,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94ed6d99ce22cac500a"),
+		"properties" : {
+			"cod" : 2285,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94ed6d99ce22cac500b"),
+		"properties" : {
+			"cod" : 2286,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94ed6d99ce22cac500c"),
+		"properties" : {
+			"cod" : 2287,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94ed6d99ce22cac500d"),
+		"properties" : {
+			"cod" : 2288,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94ed6d99ce22cac500e"),
+		"properties" : {
+			"cod" : 2289,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94ed6d99ce22cac500f"),
+		"properties" : {
+			"cod" : 2290,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94ed6d99ce22cac5010"),
+		"properties" : {
+			"cod" : 2291,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94ed6d99ce22cac5011"),
+		"properties" : {
+			"cod" : 2292,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94ed6d99ce22cac5012"),
+		"properties" : {
+			"cod" : 2293,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94ed6d99ce22cac5013"),
+		"properties" : {
+			"cod" : 2294,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94ed6d99ce22cac5014"),
+		"properties" : {
+			"cod" : 2295,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94ed6d99ce22cac5015"),
+		"properties" : {
+			"cod" : 2296,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94ed6d99ce22cac5016"),
+		"properties" : {
+			"cod" : 2297,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94ed6d99ce22cac5017"),
+		"properties" : {
+			"cod" : 2298,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94ed6d99ce22cac5018"),
+		"properties" : {
+			"cod" : 2299,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94fd6d99ce22cac5019"),
+		"properties" : {
+			"cod" : 2300,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94fd6d99ce22cac501a"),
+		"properties" : {
+			"cod" : 2301,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94fd6d99ce22cac501b"),
+		"properties" : {
+			"cod" : 2302,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94fd6d99ce22cac501c"),
+		"properties" : {
+			"cod" : 2303,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94fd6d99ce22cac501d"),
+		"properties" : {
+			"cod" : 2304,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94fd6d99ce22cac501e"),
+		"properties" : {
+			"cod" : 2305,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94fd6d99ce22cac501f"),
+		"properties" : {
+			"cod" : 2306,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94fd6d99ce22cac5020"),
+		"properties" : {
+			"cod" : 2307,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94fd6d99ce22cac5021"),
+		"properties" : {
+			"cod" : 2308,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94fd6d99ce22cac5022"),
+		"properties" : {
+			"cod" : 2309,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94fd6d99ce22cac5023"),
+		"properties" : {
+			"cod" : 2310,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94fd6d99ce22cac5024"),
+		"properties" : {
+			"cod" : 2311,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94fd6d99ce22cac5025"),
+		"properties" : {
+			"cod" : 2312,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94fd6d99ce22cac5026"),
+		"properties" : {
+			"cod" : 2313,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94fd6d99ce22cac5027"),
+		"properties" : {
+			"cod" : 2314,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94fd6d99ce22cac5028"),
+		"properties" : {
+			"cod" : 2315,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94fd6d99ce22cac5029"),
+		"properties" : {
+			"cod" : 2316,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94fd6d99ce22cac502a"),
+		"properties" : {
+			"cod" : 2317,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94fd6d99ce22cac502b"),
+		"properties" : {
+			"cod" : 2318,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94fd6d99ce22cac502c"),
+		"properties" : {
+			"cod" : 2319,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94fd6d99ce22cac502d"),
+		"properties" : {
+			"cod" : 2320,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae94fd6d99ce22cac502e"),
+		"properties" : {
+			"cod" : 2321,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae950d6d99ce22cac502f"),
+		"properties" : {
+			"cod" : 2322,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae950d6d99ce22cac5030"),
+		"properties" : {
+			"cod" : 2323,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae950d6d99ce22cac5031"),
+		"properties" : {
+			"cod" : 2324,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae950d6d99ce22cac5032"),
+		"properties" : {
+			"cod" : 2325,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae950d6d99ce22cac5033"),
+		"properties" : {
+			"cod" : 2326,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae950d6d99ce22cac5034"),
+		"properties" : {
+			"cod" : 2327,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae950d6d99ce22cac5035"),
+		"properties" : {
+			"cod" : 2328,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae950d6d99ce22cac5036"),
+		"properties" : {
+			"cod" : 2329,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae950d6d99ce22cac5037"),
+		"properties" : {
+			"cod" : 2330,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae950d6d99ce22cac5038"),
+		"properties" : {
+			"cod" : 2331,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae950d6d99ce22cac5039"),
+		"properties" : {
+			"cod" : 2332,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae950d6d99ce22cac503a"),
+		"properties" : {
+			"cod" : 2333,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae950d6d99ce22cac503b"),
+		"properties" : {
+			"cod" : 2334,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae950d6d99ce22cac503c"),
+		"properties" : {
+			"cod" : 2335,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae950d6d99ce22cac503d"),
+		"properties" : {
+			"cod" : 2336,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae950d6d99ce22cac503e"),
+		"properties" : {
+			"cod" : 2337,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae950d6d99ce22cac503f"),
+		"properties" : {
+			"cod" : 2338,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae950d6d99ce22cac5040"),
+		"properties" : {
+			"cod" : 2339,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae950d6d99ce22cac5041"),
+		"properties" : {
+			"cod" : 2340,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae950d6d99ce22cac5042"),
+		"properties" : {
+			"cod" : 2341,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae950d6d99ce22cac5043"),
+		"properties" : {
+			"cod" : 2342,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae950d6d99ce22cac5044"),
+		"properties" : {
+			"cod" : 2343,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae951d6d99ce22cac5045"),
+		"properties" : {
+			"cod" : 2344,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae951d6d99ce22cac5046"),
+		"properties" : {
+			"cod" : 2345,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae951d6d99ce22cac5047"),
+		"properties" : {
+			"cod" : 2346,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae951d6d99ce22cac5048"),
+		"properties" : {
+			"cod" : 2347,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae951d6d99ce22cac5049"),
+		"properties" : {
+			"cod" : 2348,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae951d6d99ce22cac504a"),
+		"properties" : {
+			"cod" : 2349,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae951d6d99ce22cac504b"),
+		"properties" : {
+			"cod" : 2350,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae951d6d99ce22cac504c"),
+		"properties" : {
+			"cod" : 2351,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae951d6d99ce22cac504d"),
+		"properties" : {
+			"cod" : 2352,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae951d6d99ce22cac504e"),
+		"properties" : {
+			"cod" : 2353,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae951d6d99ce22cac504f"),
+		"properties" : {
+			"cod" : 2354,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae951d6d99ce22cac5050"),
+		"properties" : {
+			"cod" : 2355,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae951d6d99ce22cac5051"),
+		"properties" : {
+			"cod" : 2356,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae951d6d99ce22cac5052"),
+		"properties" : {
+			"cod" : 2357,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae951d6d99ce22cac5053"),
+		"properties" : {
+			"cod" : 2358,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae951d6d99ce22cac5054"),
+		"properties" : {
+			"cod" : 2359,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae952d6d99ce22cac5055"),
+		"properties" : {
+			"cod" : 2360,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae952d6d99ce22cac5056"),
+		"properties" : {
+			"cod" : 2361,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae952d6d99ce22cac5057"),
+		"properties" : {
+			"cod" : 2362,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae952d6d99ce22cac5058"),
+		"properties" : {
+			"cod" : 2363,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae952d6d99ce22cac5059"),
+		"properties" : {
+			"cod" : 2364,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae952d6d99ce22cac505a"),
+		"properties" : {
+			"cod" : 2365,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae952d6d99ce22cac505b"),
+		"properties" : {
+			"cod" : 2366,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae952d6d99ce22cac505c"),
+		"properties" : {
+			"cod" : 2367,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae952d6d99ce22cac505d"),
+		"properties" : {
+			"cod" : 2368,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae952d6d99ce22cac505e"),
+		"properties" : {
+			"cod" : 2369,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae952d6d99ce22cac505f"),
+		"properties" : {
+			"cod" : 2370,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae952d6d99ce22cac5060"),
+		"properties" : {
+			"cod" : 2371,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae952d6d99ce22cac5061"),
+		"properties" : {
+			"cod" : 2372,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae952d6d99ce22cac5062"),
+		"properties" : {
+			"cod" : 2373,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae952d6d99ce22cac5063"),
+		"properties" : {
+			"cod" : 2374,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae952d6d99ce22cac5064"),
+		"properties" : {
+			"cod" : 2375,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae952d6d99ce22cac5065"),
+		"properties" : {
+			"cod" : 2376,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae952d6d99ce22cac5066"),
+		"properties" : {
+			"cod" : 2377,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae953d6d99ce22cac5067"),
+		"properties" : {
+			"cod" : 2378,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae953d6d99ce22cac5068"),
+		"properties" : {
+			"cod" : 2379,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae953d6d99ce22cac5069"),
+		"properties" : {
+			"cod" : 2380,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae953d6d99ce22cac506a"),
+		"properties" : {
+			"cod" : 2381,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae953d6d99ce22cac506b"),
+		"properties" : {
+			"cod" : 2382,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae953d6d99ce22cac506c"),
+		"properties" : {
+			"cod" : 2383,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae953d6d99ce22cac506d"),
+		"properties" : {
+			"cod" : 2384,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae953d6d99ce22cac506e"),
+		"properties" : {
+			"cod" : 2385,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae953d6d99ce22cac506f"),
+		"properties" : {
+			"cod" : 2386,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae953d6d99ce22cac5070"),
+		"properties" : {
+			"cod" : 2387,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae953d6d99ce22cac5071"),
+		"properties" : {
+			"cod" : 2388,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae953d6d99ce22cac5072"),
+		"properties" : {
+			"cod" : 2389,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae953d6d99ce22cac5073"),
+		"properties" : {
+			"cod" : 2390,
+			"id_funceme" : 3340
+		}
+	},
+	{
+		"_id" : ObjectId("5afae953d6d99ce22cac5074"),
+		"properties" : {
+			"cod" : 2391,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae953d6d99ce22cac5075"),
+		"properties" : {
+			"cod" : 2392,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae953d6d99ce22cac5076"),
+		"properties" : {
+			"cod" : 2393,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae953d6d99ce22cac5077"),
+		"properties" : {
+			"cod" : 2394,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae953d6d99ce22cac5078"),
+		"properties" : {
+			"cod" : 2395,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae953d6d99ce22cac5079"),
+		"properties" : {
+			"cod" : 2396,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae953d6d99ce22cac507a"),
+		"properties" : {
+			"cod" : 2397,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae954d6d99ce22cac507b"),
+		"properties" : {
+			"cod" : 2398,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae954d6d99ce22cac507c"),
+		"properties" : {
+			"cod" : 2399,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae954d6d99ce22cac507d"),
+		"properties" : {
+			"cod" : 2400,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae954d6d99ce22cac507e"),
+		"properties" : {
+			"cod" : 2401,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae954d6d99ce22cac507f"),
+		"properties" : {
+			"cod" : 2402,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae954d6d99ce22cac5080"),
+		"properties" : {
+			"cod" : 2403,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae954d6d99ce22cac5081"),
+		"properties" : {
+			"cod" : 2404,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae954d6d99ce22cac5082"),
+		"properties" : {
+			"cod" : 2405,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae954d6d99ce22cac5083"),
+		"properties" : {
+			"cod" : 2406,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae954d6d99ce22cac5084"),
+		"properties" : {
+			"cod" : 2407,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae954d6d99ce22cac5085"),
+		"properties" : {
+			"cod" : 2408,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae954d6d99ce22cac5086"),
+		"properties" : {
+			"cod" : 2409,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae954d6d99ce22cac5087"),
+		"properties" : {
+			"cod" : 2410,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae954d6d99ce22cac5088"),
+		"properties" : {
+			"cod" : 2411,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae954d6d99ce22cac5089"),
+		"properties" : {
+			"cod" : 2412,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae954d6d99ce22cac508a"),
+		"properties" : {
+			"cod" : 2413,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae954d6d99ce22cac508b"),
+		"properties" : {
+			"cod" : 2414,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae954d6d99ce22cac508c"),
+		"properties" : {
+			"cod" : 2415,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae954d6d99ce22cac508d"),
+		"properties" : {
+			"cod" : 2416,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae954d6d99ce22cac508e"),
+		"properties" : {
+			"cod" : 2417,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae955d6d99ce22cac508f"),
+		"properties" : {
+			"cod" : 2418,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae955d6d99ce22cac5090"),
+		"properties" : {
+			"cod" : 2419,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae955d6d99ce22cac5091"),
+		"properties" : {
+			"cod" : 2420,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae955d6d99ce22cac5092"),
+		"properties" : {
+			"cod" : 2421,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae955d6d99ce22cac5093"),
+		"properties" : {
+			"cod" : 2422,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae955d6d99ce22cac5094"),
+		"properties" : {
+			"cod" : 2423,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae955d6d99ce22cac5095"),
+		"properties" : {
+			"cod" : 2424,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae955d6d99ce22cac5096"),
+		"properties" : {
+			"cod" : 2425,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae955d6d99ce22cac5097"),
+		"properties" : {
+			"cod" : 2426,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae955d6d99ce22cac5098"),
+		"properties" : {
+			"cod" : 2427,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae955d6d99ce22cac5099"),
+		"properties" : {
+			"cod" : 2428,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae955d6d99ce22cac509a"),
+		"properties" : {
+			"cod" : 2429,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae955d6d99ce22cac509b"),
+		"properties" : {
+			"cod" : 2430,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae955d6d99ce22cac509c"),
+		"properties" : {
+			"cod" : 2431,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae955d6d99ce22cac509d"),
+		"properties" : {
+			"cod" : 2432,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae955d6d99ce22cac509e"),
+		"properties" : {
+			"cod" : 2433,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae955d6d99ce22cac509f"),
+		"properties" : {
+			"cod" : 2434,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae955d6d99ce22cac50a0"),
+		"properties" : {
+			"cod" : 2435,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae955d6d99ce22cac50a1"),
+		"properties" : {
+			"cod" : 2436,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae955d6d99ce22cac50a2"),
+		"properties" : {
+			"cod" : 2437,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae955d6d99ce22cac50a3"),
+		"properties" : {
+			"cod" : 2438,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae956d6d99ce22cac50a4"),
+		"properties" : {
+			"cod" : 2439,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae956d6d99ce22cac50a5"),
+		"properties" : {
+			"cod" : 2440,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae956d6d99ce22cac50a6"),
+		"properties" : {
+			"cod" : 2441,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae956d6d99ce22cac50a7"),
+		"properties" : {
+			"cod" : 2442,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae956d6d99ce22cac50a8"),
+		"properties" : {
+			"cod" : 2443,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae956d6d99ce22cac50a9"),
+		"properties" : {
+			"cod" : 2444,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae956d6d99ce22cac50aa"),
+		"properties" : {
+			"cod" : 2445,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae956d6d99ce22cac50ab"),
+		"properties" : {
+			"cod" : 2446,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae956d6d99ce22cac50ac"),
+		"properties" : {
+			"cod" : 2447,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae956d6d99ce22cac50ad"),
+		"properties" : {
+			"cod" : 2448,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae956d6d99ce22cac50ae"),
+		"properties" : {
+			"cod" : 2449,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae956d6d99ce22cac50af"),
+		"properties" : {
+			"cod" : 2450,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae956d6d99ce22cac50b0"),
+		"properties" : {
+			"cod" : 2451,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae956d6d99ce22cac50b1"),
+		"properties" : {
+			"cod" : 2452,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae956d6d99ce22cac50b2"),
+		"properties" : {
+			"cod" : 2453,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae956d6d99ce22cac50b3"),
+		"properties" : {
+			"cod" : 2454,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae956d6d99ce22cac50b4"),
+		"properties" : {
+			"cod" : 2455,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae956d6d99ce22cac50b5"),
+		"properties" : {
+			"cod" : 2456,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae956d6d99ce22cac50b6"),
+		"properties" : {
+			"cod" : 2457,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae956d6d99ce22cac50b7"),
+		"properties" : {
+			"cod" : 2458,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae957d6d99ce22cac50b8"),
+		"properties" : {
+			"cod" : 2459,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae957d6d99ce22cac50b9"),
+		"properties" : {
+			"cod" : 2460,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae957d6d99ce22cac50ba"),
+		"properties" : {
+			"cod" : 2461,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae957d6d99ce22cac50bb"),
+		"properties" : {
+			"cod" : 2462,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae957d6d99ce22cac50bc"),
+		"properties" : {
+			"cod" : 2463,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae957d6d99ce22cac50bd"),
+		"properties" : {
+			"cod" : 2464,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae957d6d99ce22cac50be"),
+		"properties" : {
+			"cod" : 2465,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae957d6d99ce22cac50bf"),
+		"properties" : {
+			"cod" : 2466,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae957d6d99ce22cac50c0"),
+		"properties" : {
+			"cod" : 2467,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae957d6d99ce22cac50c1"),
+		"properties" : {
+			"cod" : 2468,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae957d6d99ce22cac50c2"),
+		"properties" : {
+			"cod" : 2469,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae957d6d99ce22cac50c3"),
+		"properties" : {
+			"cod" : 2470,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae957d6d99ce22cac50c4"),
+		"properties" : {
+			"cod" : 2471,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae957d6d99ce22cac50c5"),
+		"properties" : {
+			"cod" : 2472,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae958d6d99ce22cac50c6"),
+		"properties" : {
+			"cod" : 2473,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae958d6d99ce22cac50c7"),
+		"properties" : {
+			"cod" : 2474,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae958d6d99ce22cac50c8"),
+		"properties" : {
+			"cod" : 2475,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae958d6d99ce22cac50c9"),
+		"properties" : {
+			"cod" : 2476,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae958d6d99ce22cac50ca"),
+		"properties" : {
+			"cod" : 2477,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae958d6d99ce22cac50cb"),
+		"properties" : {
+			"cod" : 2478,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae958d6d99ce22cac50cc"),
+		"properties" : {
+			"cod" : 2479,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae958d6d99ce22cac50cd"),
+		"properties" : {
+			"cod" : 2480,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae958d6d99ce22cac50ce"),
+		"properties" : {
+			"cod" : 2481,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae958d6d99ce22cac50cf"),
+		"properties" : {
+			"cod" : 2482,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae958d6d99ce22cac50d0"),
+		"properties" : {
+			"cod" : 2483,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae958d6d99ce22cac50d1"),
+		"properties" : {
+			"cod" : 2484,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae958d6d99ce22cac50d2"),
+		"properties" : {
+			"cod" : 2485,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae958d6d99ce22cac50d3"),
+		"properties" : {
+			"cod" : 2486,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae958d6d99ce22cac50d4"),
+		"properties" : {
+			"cod" : 2487,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae958d6d99ce22cac50d5"),
+		"properties" : {
+			"cod" : 2488,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae958d6d99ce22cac50d6"),
+		"properties" : {
+			"cod" : 2489,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae958d6d99ce22cac50d7"),
+		"properties" : {
+			"cod" : 2490,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae958d6d99ce22cac50d8"),
+		"properties" : {
+			"cod" : 2491,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae958d6d99ce22cac50d9"),
+		"properties" : {
+			"cod" : 2492,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae958d6d99ce22cac50da"),
+		"properties" : {
+			"cod" : 2493,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae958d6d99ce22cac50db"),
+		"properties" : {
+			"cod" : 2664,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae959d6d99ce22cac50dc"),
+		"properties" : {
+			"cod" : 2665,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae959d6d99ce22cac50dd"),
+		"properties" : {
+			"cod" : 2666,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae959d6d99ce22cac50de"),
+		"properties" : {
+			"cod" : 2667,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae959d6d99ce22cac50df"),
+		"properties" : {
+			"cod" : 2668,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae959d6d99ce22cac50e0"),
+		"properties" : {
+			"cod" : 2669,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae959d6d99ce22cac50e1"),
+		"properties" : {
+			"cod" : 2670,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae959d6d99ce22cac50e2"),
+		"properties" : {
+			"cod" : 2671,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae959d6d99ce22cac50e3"),
+		"properties" : {
+			"cod" : 2672,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae959d6d99ce22cac50e4"),
+		"properties" : {
+			"cod" : 2673,
+			"id_funceme" : null
+		}
+	},
+	{
+		"_id" : ObjectId("5afae959d6d99ce22cac50e5"),
+		"properties" : {
+			"cod" : 2674,
+			"id_funceme" : null
+		}
+	}
+]}
