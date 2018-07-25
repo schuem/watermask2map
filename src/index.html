@@ -32,7 +32,18 @@
     </div>
 </div>
 <div id=legend></div>
+
+
 <script>
+
+var idtest=12555
+$.getJSON('http://141.89.96.184:5155',{'id_funceme':idtest}, function(responseText) {
+  alert(responseText);
+});
+
+// $.getJSON('http://141.89.96.184:5155',{'properties.cod':2}, function(responseText) {
+  // alert(responseText);
+// });
 
   $(".pane").hide();
   $("#img-load").hide();
@@ -265,6 +276,11 @@
   }
 
 
+
+
+
+
+
 var osmTiles = new ol.layer.Tile({
 	name: 'osm',
   source: new ol.source.OSM({
@@ -325,21 +341,8 @@ var map = new ol.Map({
 	view: view
 });
 
-//
-// $.get( "id_funceme.json", function( data ) {
-//   alert( "Data Loaded: " + data );
-// });
 
-// var treeData;
-//
-// var oReq = new XMLHttpRequest();
-// oReq.onload = reqListener;
-// oReq.open("get", "id_funceme.json", true);
-// oReq.send();
-//
-// function reqListener(e) {
-//     treeData = JSON.parse(this.responseText);
-// }
+
 
 map.on('singleclick', function(event) {
   if (map.getTargetElement().style.cursor == 'pointer') {
@@ -387,26 +390,6 @@ map.on('singleclick', function(event) {
           } //the funceme API request should happen somewhere here. the data should be plotted into the #feature-info-chart
         }
       })
-      // THE FOLLOWING IS NOT WORKING. A WORKAROUND IS https://stackoverflow.com/questions/19706046/how-to-read-an-external-local-json-file-in-javascript after this:
-      // https://gist.github.com/jmigueldelgado/c0462a33ba5602cb41a19f736d736cb3
-      //var mydata = JSON.parse(data);
-
-
-      // open 27017 port in ubuntu https://www.digitalocean.com/community/questions/how-do-i-open-ports-on-an-ubuntu-server
-      // allow connection from remote to mongodb https://ianlondon.github.io/blog/mongodb-auth/
-      // used this db.createUser({ user: 'sar2water',pwd:'buhayra',roles:[{role:'read',db:'sar2watermask'}]})
-//      fetch('http://184.89.96.184:27017/sar2watermask/toponyms/?filter_id_funceme=12555')
-// get reservatorio.cod corresponding to cogerid from mongodb using mongo API. MongoDB does offer a REST webservice allowing rudimentary queries through XmlHttpRequests. To enable it, you have to start mongod with the --rest parameter. You can then query it like this:
-//
-//http://127.0.0.1:27017/sar2watermask/toponyms/?filter_id_funceme=12555
-//
-//You can query this URL with an AJAX XmlHttpRequest like any webservice. but first the file should be created in the server
-//      fetch('http://api.funceme.br/rest/acude/volume?reservatorio.cod=' + cogerid + '&dataColeta.GTE=2013-06-01')
-//        .then(function() {
-        //   (resp) => resp.json()
-        // }).catch(function(error) {
-        // console.log(error);
-        // });
       });
     }
 });
