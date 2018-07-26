@@ -37,9 +37,7 @@
 <script>
 
 var idtest=12555
-$.getJSON('http://141.89.96.184:5155',{'id_funceme':idtest}, function(responseText) {
-  alert(responseText);
-});
+$.get('http://141.89.96.184:5155',{'id_funceme':idtest});
 
 // $.getJSON('http://141.89.96.184:5155',{'properties.cod':2}, function(responseText) {
   // alert(responseText);
