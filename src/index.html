@@ -33,21 +33,33 @@
 </div>
 <div id=legend></div>
 
-
 <script>
 
 var idtest=12555
-$.get('http://141.89.96.184:5155',{'id_funceme':idtest});
 
-// $.getJSON('http://141.89.96.184:5155',{'properties.cod':2}, function(responseText) {
-  // alert(responseText);
-// });
+$.ajax({
+  url: 'http://seca-vista.geo.uni-potsdam.de:3000',
+  type: 'GET',
+  data: {idRequest : idtest },
+  success: function(response) {
+      console.log(response);
+  },
+  error: function(error){
+    console.log('Error ${error}')
+  }
+});
+
+
+
+
+
 
   $(".pane").hide();
   $("#img-load").hide();
 
   mapEle = document.getElementById('js-map');
   mapWidth = mapEle.clientWidth;
+
 
   $.ajax({
     type: 'GET',
@@ -406,7 +418,6 @@ map.on('pointermove', function(e) {
 map.getView().on('change:resolution', function(e) {
   console.log(view.getZoom());
 });
-
 
 
 
