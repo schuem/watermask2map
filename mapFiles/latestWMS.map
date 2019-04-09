@@ -2,11 +2,11 @@ MAP
 	NAME "wmstest"
 	EXTENT -41.413966 -7.838684 -37.279315 -2.803906
 	SIZE 800 600
-
-	PROJECTION
+	
+	PROJECTION 
 		"init=epsg:4326"
 	END
-
+	
 	WEB
 		HEADER	"../templates/latest_web_header.html"
 		FOOTER	"../templates/latest_web_footer.html"
@@ -47,18 +47,20 @@ MAP
     END
     TEMPLATE "../templates/legend.html"
   END
-
+	
   LAYER
     NAME 		watermask
     STATUS 		OFF
     TYPE 		POLYGON
     CONNECTIONTYPE 	POSTGIS
-    CONNECTION 		"host=localhost dbname=watermasks user=xxxxxx password=xxxxxx"
-    DATA 			"geom from (select distinct on (id_funceme) id_funceme, ingestion_time, area, geom, id from masks order by id_funceme, ingestion_time desc) as subquery using unique id using srid=4326"
-    #DATA 			"geom from (select distinct on (id_funceme) id_funceme, ingestion_time, area, ST_Simplify(geom,0.001,true) as geom, id from masks order by id_funceme, ingestion_time desc) as subquery using unique id using srid=4326"
+    CONNECTION 		"host=localhost dbname=watermasks user=xxx password=xxx"
+#    DATA 		"geom from (select distinct on (id_jrc) id_jrc, ingestion_time, area, geom, id from neb where case when area <> 0 then wmxjrc_area/area > 0.9 else true end and ingestion_time > (max(ingestion_time) - interval '40 days')  order by id_jrc, ingestion_time desc) as subquery using unique id using srid=4326"
+    DATA 			"geom from (select distinct on (id_jrc) id_jrc, ingestion_time, area, geom, id from neb where case when area <> 0 then wmxjrc_area/area > 0.9 else true end and ingestion_time > '2018-08-01' order by id_jrc, ingestion_time desc) as subquery using unique id using srid=4326"
+#    DATA 			"geom from (select distinct on (id_jrc) id_jrc, ingestion_time, area, geom, id from neb where case when area <> 0 then wmxjrc_area/area > 0.9 else true end order by id_jrc, ingestion_time desc) as subquery using unique id using srid=4326"
+    #DATA 			"geom from (select distinct on (id_jrc) id_jrc, ingestion_time, area, geom, id from neb where area > 0 and wmxjrc_area/area > 0.3 order by id_jrc, ingestion_time desc) as subquery using unique id using srid=4326"
     #PROCESSING 		"NATIVE_FILTER=extract(year from ingestion_time) = 2017 AND extract(month from ingestion_time) = 12"
     PROCESSING "CLOSE_CONNECTION=DEFER"
-
+    
     HEADER 	 "../templates/latest_layer_header.html"
     FOOTER 	 "../templates/latest_layer_footer.html"
     TEMPLATE "../templates/latest_query.html"
@@ -67,21 +69,51 @@ MAP
       NAME "watermask"
       STYLE
         SYMBOL 'circle'
-        COLOR 0 0 0
+        COLOR 0 0 0 
       END
-    END
+    END 
 
   END
+
+
+  LAYER
+    NAME 		JRC-Global-Water-Bodies
+    STATUS 		OFF
+    TYPE 		POLYGON
+    CONNECTIONTYPE 	POSTGIS
+    CONNECTION 		"host=localhost dbname=watermasks user=xxx password=xxx"
+    DATA 			"geom from jrc_neb using unique id_jrc using srid=4326"
+    PROCESSING "CLOSE_CONNECTION=DEFER"
+    
+    #HEADER 	 "../templates/latest_layer_header.html"
+    #FOOTER 	 "../templates/latest_layer_footer.html"
+    #TEMPLATE "../templates/latest_query.html"
+
+    CLASS
+      NAME "JRC Global Water Bodies (static)"
+      STYLE
+	SYMBOL 'circle'
+      	OUTLINECOLOR 255 69 0
+      	WIDTH 1
+      END
+      STYLE
+        COLOR 255 69 0
+        OPACITY 0
+      END
+    END
+  END
+
+
 
   LAYER
     NAME 		funceme
     STATUS 		OFF
     TYPE 		POLYGON
     CONNECTIONTYPE 	POSTGIS
-    CONNECTION 		"host=localhost dbname=watermasks user=xxxxxx password=xxxxxx"
+    CONNECTION 		"host=localhost dbname=watermasks user=xxx password=xxx"
     DATA 			"geom from reference using unique ogc_fid using srid=4326"
     PROCESSING "CLOSE_CONNECTION=DEFER"
-
+    
     #HEADER 	 "../templates/latest_layer_header.html"
     #FOOTER 	 "../templates/latest_layer_footer.html"
     #TEMPLATE "../templates/latest_query.html"
@@ -100,6 +132,63 @@ MAP
     END
   END
 
+
+  LAYER
+    NAME 		watermask-sib
+    STATUS 		OFF
+    TYPE 		POLYGON
+    CONNECTIONTYPE 	POSTGIS
+    CONNECTION 		"host=localhost dbname=watermasks user=xxx password=xxx"
+    DATA 			"geom from (select distinct on (id_jrc) id_jrc, ingestion_time, area, geom, id from sib where area > 0 and wmxjrc_area/area > 0.3 order by id_jrc, ingestion_time desc) as subquery using unique id using srid=4326"
+    #DATA 			"geom from (select distinct on (id_jrc) id_jrc, ingestion_time, area, ST_Simplify(geom,0.001,true) as geom, id from neb where area > 0 and wmxjrc_area/area > 0.3 order by id_jrc, ingestion_time desc) as subquery using unique id using srid=4326"
+    #PROCESSING 		"NATIVE_FILTER=extract(year from ingestion_time) = 2017 AND extract(month from ingestion_time) = 12"
+    PROCESSING "CLOSE_CONNECTION=DEFER"
+    
+    HEADER 	 "../templates/latest_layer_header.html"
+    FOOTER 	 "../templates/latest_layer_footer.html"
+    TEMPLATE "../templates/latest_query.html"
+
+    CLASS
+      NAME "watermask-sib"
+      STYLE
+        SYMBOL 'circle'
+        COLOR 0 0 0 
+      END
+    END 
+
+  END
+
+
+  LAYER
+    NAME 		JRC-Global-Water-Bodies-sib
+    STATUS 		OFF
+    TYPE 		POLYGON
+    CONNECTIONTYPE 	POSTGIS
+    CONNECTION 		"host=localhost dbname=watermasks user=xxx password=xxx"
+    DATA 			"geom from jrc_sib using unique id_jrc using srid=4326"
+    PROCESSING "CLOSE_CONNECTION=DEFER"
+    
+    #HEADER 	 "../templates/latest_layer_header.html"
+    #FOOTER 	 "../templates/latest_layer_footer.html"
+    #TEMPLATE "../templates/latest_query.html"
+
+    CLASS
+      NAME "JRC Global Water Bodies (static)"
+      STYLE
+	SYMBOL 'circle'
+      	OUTLINECOLOR 255 69 0
+      	WIDTH 1
+      END
+      STYLE
+        COLOR 255 69 0
+        OPACITY 0
+      END
+    END
+  END
+
+
+
+
   LAYER
     NAME dem
     STATUS OFF
@@ -111,3 +200,4 @@ MAP
   END
 
 END
+		
